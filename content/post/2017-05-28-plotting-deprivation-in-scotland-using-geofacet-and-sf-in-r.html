@@ -54,9 +54,9 @@ data_simd_ranks$HBname[data_simd_ranks$HBname == &quot;Western Isles&quot;] &lt;
   geom_histogram(aes(x = Rank, y = ..ncount.., fill = median_deprivation), binwidth = 100) +
   facet_geo(~HBname, grid = &quot;nhs_scot_grid&quot;) +
   labs(title = &quot;Deprivation in Health Boards in Scotland&quot;,
-       x = &quot;Relative deprivation of data zones&quot;,
+       x = &quot;Relative deprivation of data zones (left = more deprived neighbourhoods)&quot;,
        y = &quot;Proportion of data zones&quot;,
-       caption = &quot;Distribution to the left shows increased deprivation in healthboard, darker colour shows increased average deprivation of healthboard&quot;) + 
+       caption = &quot;Darker colour shows increased average deprivation of healthboard&quot;) + 
   theme_bw() +
   theme(legend.position = &quot;none&quot;) </code></pre>
 <p><img src="/post/2017-05-28-plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r_files/figure-html/geofacet_deprivation_plots-1.png" width="672" /></p>

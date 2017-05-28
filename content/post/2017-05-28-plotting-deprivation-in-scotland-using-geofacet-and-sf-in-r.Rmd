@@ -60,9 +60,9 @@ data_simd_ranks %>%
   geom_histogram(aes(x = Rank, y = ..ncount.., fill = median_deprivation), binwidth = 100) +
   facet_geo(~HBname, grid = "nhs_scot_grid") +
   labs(title = "Deprivation in Health Boards in Scotland",
-       x = "Relative deprivation of data zones",
+       x = "Relative deprivation of data zones (left = more deprived neighbourhoods)",
        y = "Proportion of data zones",
-       caption = "Distribution to the left shows increased deprivation in healthboard, darker colour shows increased average deprivation of healthboard") + 
+       caption = "Darker colour shows increased average deprivation of healthboard") + 
   theme_bw() +
   theme(legend.position = "none") 
 ```
