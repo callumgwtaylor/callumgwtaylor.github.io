@@ -1,6 +1,6 @@
 ---
 title: "About"
-date: "2017-05-28T21:48:51-07:00"
+date: "2017-05-28"
 ---
 
 This shows what I'm procrastinating with and pretending counts as work.

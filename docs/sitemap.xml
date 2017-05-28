@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2017-05-28T21:48:51-07:00</lastmod>
+    <loc>/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</loc>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/2017/05/28/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</loc>
+    <loc>/about/</loc>
     <lastmod>2017-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-05-28T21:48:51-07:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -24,49 +24,49 @@
   
   <url>
     <loc>/tags/deprivation/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/geofacet/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/public-health/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/scotland/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/sf/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,28 +6,29 @@
     <description>Recent content on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 May 2017 21:48:51 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>
+      <link>/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>
+      <description>Using the geofacet package to plot deprivation in Scotland by Health BoardsA few months ago, when I was first starting to learn to use R, I tried looking at the data from the Scottish Index of Multiple Deprivation. The Scottish Government split Scotland up into 6976 equally populated “data zones” (not quite neighbourhoods, but pretty close), and ranked them from most deprived (1), to least deprived (6976)
+Recently I’ve gone back to the same files, to see if what I’ve learnt has made it easier to look at deprivation in Scotland.</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>/about/</link>
-      <pubDate>Sun, 28 May 2017 21:48:51 -0700</pubDate>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
       <description>This shows what I&amp;rsquo;m procrastinating with and pretending counts as work.
 This is a personal site built using the blogdown package. The theme is from @spf13/hyde</description>
-    </item>
-    
-    <item>
-      <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>
-      <link>/2017/05/28/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
-      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/2017/05/28/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>
-      <description>library(tidyverse)library(sf)library(readxl)library(geofacet)map_scot &amp;lt;- st_read(&amp;quot;../data/scot_gov_data/data_zone_shapefiles/.&amp;quot;)## Reading layer `SG_SIMD_2016&amp;#39; from data source `C:\Users\callu\Dropbox\blog\content\data\scot_gov_data\data_zone_shapefiles&amp;#39; using driver `ESRI Shapefile&amp;#39;## converted into: POLYGON## Simple feature collection with 6976 features and 49 fields## geometry type: MULTIPOLYGON## dimension: XY## bbox: xmin: 5513 ymin: 530252.8 xmax: 470323 ymax: 1220302## epsg (SRID): NA## proj4string: +proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +datum=OSGB36 +units=m +no_defsdata_postcode_simd &amp;lt;- read_excel(&amp;quot;../data/scot_gov_data/00505244.xlsx&amp;quot;, sheet = 2)data_simd_ranks &amp;lt;- read_excel(&amp;quot;.</description>
     </item>
     
   </channel>

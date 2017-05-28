@@ -1,7 +1,7 @@
 ---
 title: Plotting deprivation in Scotland, using geofacet and sf in R
 author: ~
-date: '2017-05-28'
+date: '2017-05-29'
 slug: plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r
 categories: []
 tags: []
@@ -17,6 +17,12 @@ Tags:
 
 
 
+<div id="using-the-geofacet-package-to-plot-deprivation-in-scotland-by-health-boards" class="section level2">
+<h2>Using the geofacet package to plot deprivation in Scotland by Health Boards</h2>
+<p>A few months ago, when I was first starting to learn to use R, I tried looking at the data from the <a href="http://www.gov.scot/Topics/Statistics/SIMD">Scottish Index of Multiple Deprivation</a>. The Scottish Government split Scotland up into 6976 equally populated “data zones” (not quite neighbourhoods, but pretty close), and ranked them from most deprived (1), to least deprived (6976)</p>
+<p>Recently I’ve gone back to the same files, to see if what I’ve learnt has made it easier to look at deprivation in Scotland.</p>
+<p>This weekend I found out about a new-ish package, geofacet from <a href="https://twitter.com/hafenstats">Ryan Hafen</a>. Luckily for me, <a href="https://github.com/josephjosephadams">Joseph Adams</a> had already submitted a grid for Scottish Health Boards, making it so easy to plot this all out.</p>
+<p>I’ve included the code I used to make the plot.</p>
 <pre class="r"><code>library(tidyverse)
 library(sf)
 library(readxl)
@@ -34,15 +40,49 @@ library(geofacet)</code></pre>
 data_simd_ranks &lt;- read_excel(&quot;../data/scot_gov_data/00512735.xlsx&quot;, sheet = 3)
 
 data_simd_ranks$HBname[data_simd_ranks$HBname == &quot;Western Isles&quot;] &lt;- &quot;Western Isle&quot;</code></pre>
+<div id="deprivation-in-scotland-by-health-boards" class="section level3">
+<h3>Deprivation in Scotland by Health Boards</h3>
+<p>So looking at this, brighter colours equal lower average levels of deprivation. A distribution towards the left shows a healthboard with a greater proportion of deprived datazones.</p>
+<p>Using the geofacet package, we swap out a normal <code>facet_wrap()</code> for <code>facet_geo()</code>, and tell it what layout we want <code>grid=(&quot;nhs_scot_grid&quot;)</code>. The only problem is that this grid has “Western Isles” saved as “Western Isle”, so we have to rename out own data to match this. Now our health boards are placed in roughly a geographical order.</p>
 <pre class="r"><code>data_simd_ranks %&gt;%
   select(DataZone = DZ, HBname) %&gt;%
   left_join(map_scot, .) %&gt;%
   group_by(HBname) %&gt;%
-  mutate(mean_deprivation = mean(Rank)) %&gt;%
+  mutate(median_deprivation = median(Rank)) %&gt;%
   ungroup() %&gt;%
   ggplot() +
-  geom_histogram(aes(x = Rank, y = ..ncount.., fill = mean_deprivation), binwidth = 100) +
+  geom_histogram(aes(x = Rank, y = ..ncount.., fill = median_deprivation), binwidth = 100) +
   facet_geo(~HBname, grid = &quot;nhs_scot_grid&quot;) +
+  labs(title = &quot;Deprivation in Health Boards in Scotland&quot;,
+       x = &quot;Relative deprivation of data zones&quot;,
+       y = &quot;Proportion of data zones&quot;,
+       caption = &quot;Distribution to the left shows increased deprivation in healthboard, darker colour shows increased average deprivation of healthboard&quot;) + 
   theme_bw() +
   theme(legend.position = &quot;none&quot;) </code></pre>
-<p><img src="/post/2017-05-28-plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r_files/figure-html/city_deprivation_plots-1.png" width="672" /></p>
+<p><img src="/post/2017-05-28-plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r_files/figure-html/geofacet_deprivation_plots-1.png" width="768" /></p>
+</div>
+<div id="glasgow-versus-edinburgh" class="section level3">
+<h3>Glasgow versus Edinburgh</h3>
+<p>In the plot above, the west coast / east coast divide is looking pretty big in the central belt of Scotland. The plot below shows this even more. Glasgows neighbourhoods are massively skewed towards some of the most deprived parts of Scotland, whereas in Edinburgh we see the opposite. Obviously Glasgow still has some very well off parts, and Edinburgh has some deprived areas, but in this graph they seem to be polar opposites.</p>
+<pre class="r"><code>city_data &lt;- data_simd_ranks %&gt;%
+  select(DataZone = DZ, LAname) %&gt;%
+  left_join(map_scot, .) %&gt;%
+  group_by(LAname) %&gt;%
+  filter(LAname == &quot;Glasgow City&quot; | LAname == &quot;City of Edinburgh&quot;) %&gt;%
+  mutate(median_deprivation = median(Rank)) %&gt;%
+  ungroup()
+
+city_data$LAname &lt;- parse_factor(city_data$LAname, levels = c(&quot;Glasgow City&quot;, &quot;City of Edinburgh&quot;))
+
+  ggplot(city_data) +
+  geom_histogram(aes(x = Rank, y = ..ncount.., fill = median_deprivation), binwidth = 100) +
+  facet_wrap(~LAname) +
+  labs(title = &quot;Deprivation in Glasgow and Edinburgh&quot;,
+       x = &quot;Relative deprivation of data zones&quot;,
+       y = &quot;Proportion of data zones&quot;,
+       caption = &quot;Distribution to the left shows increased deprivation in city, darker colour shows increased average deprivation of city&quot;) + 
+  theme_bw() +
+  theme(legend.position = &quot;none&quot;) </code></pre>
+<p><img src="/post/2017-05-28-plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r_files/figure-html/central_belt__plots-1.png" width="768" /></p>
+</div>
+</div>
