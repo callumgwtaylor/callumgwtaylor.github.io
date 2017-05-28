@@ -1,0 +1,49 @@
+---
+title: Plotting deprivation in Scotland, using geofacet and sf in R
+author: ~
+date: '2017-05-28'
+slug: plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r
+categories: []
+tags: []
+Description: ''
+Tags:
+  - Deprivation
+  - Public Health
+  - R
+  - Scotland
+  - geofacet
+  - sf
+---
+
+```{r library, echo=TRUE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(sf)
+library(readxl)
+library(geofacet)
+
+```
+
+```{r shape_file_import, echo=TRUE, message=FALSE, warning=FALSE}
+map_scot <- st_read("../data/scot_gov_data/data_zone_shapefiles/.")
+```
+
+```{r excel_scot_gov_import, echo=TRUE, message=FALSE, warning=FALSE}
+data_postcode_simd <- read_excel("../data/scot_gov_data/00505244.xlsx", sheet = 2)
+data_simd_ranks <- read_excel("../data/scot_gov_data/00512735.xlsx", sheet = 3)
+
+data_simd_ranks$HBname[data_simd_ranks$HBname == "Western Isles"] <- "Western Isle"
+```
+
+```{r city_deprivation_plots, echo=TRUE, message=FALSE, warning=FALSE}
+data_simd_ranks %>%
+  select(DataZone = DZ, HBname) %>%
+  left_join(map_scot, .) %>%
+  group_by(HBname) %>%
+  mutate(mean_deprivation = mean(Rank)) %>%
+  ungroup() %>%
+  ggplot() +
+  geom_histogram(aes(x = Rank, y = ..ncount.., fill = mean_deprivation), binwidth = 100) +
+  facet_geo(~HBname, grid = "nhs_scot_grid") +
+  theme_bw() +
+  theme(legend.position = "none") 
+```

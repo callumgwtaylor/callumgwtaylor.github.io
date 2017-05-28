@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   
-  <title>A Hugo website</title>
+  <title>Callum Taylor</title>
   
 
   
@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="./favicon.png">
 
   
-  <link href="./index.xml" rel="alternate" type="application/rss+xml" title="A Hugo website" />
+  <link href="./index.xml" rel="alternate" type="application/rss+xml" title="Callum Taylor" />
 </head>
 
 <body class="theme-base-0d ">
@@ -31,16 +31,16 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="./"><h1>A Hugo website</h1></a>
+      <a href="./"><h1>Callum Taylor</h1></a>
       <p class="lead">
-       A website built through Hugo and blogdown. 
+       A personal blog - mostly using R in Medicine 
       </p>
     </div>
 
     <ul class="sidebar-nav">
       <li><a href="./">Home</a> </li>
       
-        <li><a href="./about/"> About </a></li>
+        <li><a href="./about/"> Callum Taylor </a></li>
       
         <li><a href="https://github.com/callumgwtaylor"> GitHub </a></li>
       
@@ -59,120 +59,58 @@
       
   <div class="post">
     <h1 class="post-title">
-      <a href="./2016/12/30/a-plain-markdown-post/">
-        A Plain Markdown Post
-      </a>
-    </h1>
-
-    <span class="post-date">Fri, Dec 30, 2016</span>
-
-    <p>This is a post written in plain Markdown (<code>*.md</code>) instead of R Markdown (<code>*.Rmd</code>). The major differences are:</p>
-
-<ol>
-<li>You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (<code>```{r}</code>);</li>
-<li>A plain Markdown post is rendered through <a href="https://gohugo.io/overview/configuration/">Blackfriday</a>, and an R Markdown document is compiled by <a href="http://rmarkdown.rstudio.com"><strong>rmarkdown</strong></a> and <a href="http://pandoc.org">Pandoc</a>.</li>
-</ol>
-
-<p>There are many differences in syntax between Blackfriday&rsquo;s Markdown and Pandoc&rsquo;s Markdown. For example, you can write a task list with Blackfriday but not with Pandoc:</p>
-
-<ul class="task-list">
-<li><input type="checkbox" checked disabled class="task-list-item"> Write an R package.</li>
-<li><input type="checkbox" disabled class="task-list-item"> Write a book.</li>
-<li><input type="checkbox" disabled class="task-list-item"> &hellip;</li>
-<li><input type="checkbox" disabled class="task-list-item"> Profit!</li>
-</ul>
-
-<p>Similarly, Blackfriday does not support LaTeX math and Pandoc does. I have added the MathJax support to this theme (<a href="https://github.com/yihui/hugo-lithium-theme">hugo-lithium-theme</a>) but there is a caveat for plain Markdown posts: you have to include math expressions in a pair of backticks (inline: <code>`$ $`</code>; display style: <code>`$$ $$`</code>), e.g., <code>$S_n = \sum_{i=1}^n X_i$</code>.<sup class="footnote-ref" id="fnref:This-is-because"><a rel="footnote" href="#fn:This-is-because">1</a></sup> For R Markdown posts, you do not need the backticks, because Pandoc can identify and process math expressions.</p>
-
-<p>When creating a new post, you have to decide whether the post format is Markdown or R Markdown, and this can be done via the <code>rmd</code> argument of the function <code>blogdown::new_post()</code>, e.g.</p>
-
-<pre><code class="language-r">blogdown::new_post(&quot;Post Title&quot;, rmd = FALSE)
-</code></pre>
-<div class="footnotes">
-
-<hr />
-
-<ol>
-<li id="fn:This-is-because">This is because we have to protect the math expressions from being interpreted as Markdown. You may not need the backticks if your math expression does not contain any special Markdown syntax such as underscores or asterisks, but it is always a safer choice to use backticks. When you happen to have a pair of literal dollar signs inside the same element, you can escape one dollar sign, e.g., <code>\$50 and $100</code> renders &ldquo;\$50 and $100&rdquo;. <a class="footnote-return" href="#fnref:This-is-because"><sup>[return]</sup></a></li>
-</ol>
-</div>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
       <a href="./about/">
         About
       </a>
     </h1>
 
-    <span class="post-date">Thu, May 5, 2016</span>
+    <span class="post-date">Sun, May 28, 2017</span>
 
-    <p>This is a &ldquo;hello world&rdquo; example website for the <a href="https://github.com/rstudio/blogdown"><strong>blogdown</strong></a> package. The theme was forked from <a href="https://github.com/jrutheiser/hugo-lithium-theme">@jrutheiser/hugo-lithium-theme</a> and modified by <a href="https://github.com/yihui/hugo-lithium-theme">Yihui Xie</a>.</p>
+    <p>This shows what I&rsquo;m procrastinating with and pretending counts as work.</p>
 
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="./2015/07/23/hello-r-markdown/">
-        Hello R Markdown
-      </a>
-    </h1>
-
-    <span class="post-date">Thu, Jul 23, 2015</span>
-
-    <div id="r-markdown" class="section level1">
-<h1>R Markdown</h1>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932</code></pre>
-</div>
-<div id="including-plots" class="section level1">
-<h1>Including Plots</h1>
-<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
-<pre class="r"><code>par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
-  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
-  init.angle = -50, border = NA
-)</code></pre>
-<div class="figure"><span id="fig:pie"></span>
-<img src="./post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
-<p class="caption">
-Figure 1: A fancy pie chart.
-</p>
-</div>
-</div>
+<p>This is a personal site built using the <a href="https://github.com/rstudio/blogdown"><strong>blogdown</strong></a> package.
+The theme is from <a href="https://github.com/spf13/hyde">@spf13/hyde</a></p>
 
   </div>
   
   <div class="post">
     <h1 class="post-title">
-      <a href="./2015/01/01/lorem-ipsum/">
-        Lorem Ipsum
+      <a href="./2017/05/28/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/">
+        Plotting deprivation in Scotland, using geofacet and sf in R
       </a>
     </h1>
 
-    <span class="post-date">Thu, Jan 1, 2015</span>
+    <span class="post-date">Sun, May 28, 2017</span>
 
-    <p><strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <em>magna aliqua</em>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <pre class="r"><code>library(tidyverse)
+library(sf)
+library(readxl)
+library(geofacet)</code></pre>
+<pre class="r"><code>map_scot &lt;- st_read(&quot;../data/scot_gov_data/data_zone_shapefiles/.&quot;)</code></pre>
+<pre><code>## Reading layer `SG_SIMD_2016&#39; from data source `C:\Users\callu\Dropbox\blog\content\data\scot_gov_data\data_zone_shapefiles&#39; using driver `ESRI Shapefile&#39;
+## converted into: POLYGON
+## Simple feature collection with 6976 features and 49 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XY
+## bbox:           xmin: 5513 ymin: 530252.8 xmax: 470323 ymax: 1220302
+## epsg (SRID):    NA
+## proj4string:    +proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +datum=OSGB36 +units=m +no_defs</code></pre>
+<pre class="r"><code>data_postcode_simd &lt;- read_excel(&quot;../data/scot_gov_data/00505244.xlsx&quot;, sheet = 2)
+data_simd_ranks &lt;- read_excel(&quot;../data/scot_gov_data/00512735.xlsx&quot;, sheet = 3)
+
+data_simd_ranks$HBname[data_simd_ranks$HBname == &quot;Western Isles&quot;] &lt;- &quot;Western Isle&quot;</code></pre>
+<pre class="r"><code>data_simd_ranks %&gt;%
+  select(DataZone = DZ, HBname) %&gt;%
+  left_join(map_scot, .) %&gt;%
+  group_by(HBname) %&gt;%
+  mutate(mean_deprivation = mean(Rank)) %&gt;%
+  ungroup() %&gt;%
+  ggplot() +
+  geom_histogram(aes(x = Rank, y = ..ncount.., fill = mean_deprivation), binwidth = 100) +
+  facet_geo(~HBname, grid = &quot;nhs_scot_grid&quot;) +
+  theme_bw() +
+  theme(legend.position = &quot;none&quot;) </code></pre>
+<p><img src="./post/2017-05-28-plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r_files/figure-html/city_deprivation_plots-1.png" width="672" /></p>
 
   </div>
   

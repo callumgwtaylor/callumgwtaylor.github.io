@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Callum Taylor</title>
+    <link>/tags/r/</link>
+    <description>Recent content in R on Callum Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>
+      <link>/2017/05/28/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
+      <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/28/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>
+      <description>library(tidyverse)library(sf)library(readxl)library(geofacet)map_scot &amp;lt;- st_read(&amp;quot;../data/scot_gov_data/data_zone_shapefiles/.&amp;quot;)## Reading layer `SG_SIMD_2016&amp;#39; from data source `C:\Users\callu\Dropbox\blog\content\data\scot_gov_data\data_zone_shapefiles&amp;#39; using driver `ESRI Shapefile&amp;#39;## converted into: POLYGON## Simple feature collection with 6976 features and 49 fields## geometry type: MULTIPOLYGON## dimension: XY## bbox: xmin: 5513 ymin: 530252.8 xmax: 470323 ymax: 1220302## epsg (SRID): NA## proj4string: +proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +datum=OSGB36 +units=m +no_defsdata_postcode_simd &amp;lt;- read_excel(&amp;quot;../data/scot_gov_data/00505244.xlsx&amp;quot;, sheet = 2)data_simd_ranks &amp;lt;- read_excel(&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

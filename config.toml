@@ -1,7 +1,7 @@
 baseurl = "/"
 relativeurls = true
 languageCode = "en-us"
-title = "A Hugo website"
+title = "Callum Taylor"
 theme = "hyde"
 googleAnalytics = ""
 disqusShortname = ""
@@ -12,7 +12,7 @@ publishDir = "docs"
     post = "/:year/:month/:day/:slug/"
 
 [[menu.main]]
-    name = "About"
+    name = "Callum Taylor"
     url = "/about/"
 [[menu.main]]
     name = "GitHub"
@@ -22,7 +22,7 @@ publishDir = "docs"
     url = "https://twitter.com/callumgwt"
 
 [params]
-    description = "A website built through Hugo and blogdown."
+   description = "A personal blog - mostly using R in Medicine"
     themeColor = "theme-base-0d"
 
     # options for highlight.js (version, additional languages, and theme)

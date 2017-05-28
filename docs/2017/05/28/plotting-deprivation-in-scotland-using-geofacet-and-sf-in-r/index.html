@@ -1,0 +1,95 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.20.7" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+  <title>Plotting deprivation in Scotland, using geofacet and sf in R &middot; Callum Taylor</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../../css/poole.css">
+  <link rel="stylesheet" href="../../../../css/syntax.css">
+  <link rel="stylesheet" href="../../../../css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../../../apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="../../../../favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Callum Taylor" />
+</head>
+
+	<body class="theme-base-0d ">
+		<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="../../../../"><h1>Callum Taylor</h1></a>
+      <p class="lead">
+       A personal blog - mostly using R in Medicine 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="../../../../">Home</a> </li>
+      
+        <li><a href="../../../../about/"> Callum Taylor </a></li>
+      
+        <li><a href="https://github.com/callumgwtaylor"> GitHub </a></li>
+      
+        <li><a href="https://twitter.com/callumgwt"> Twitter </a></li>
+      
+    </ul>
+
+    <p>&copy; 2017. All rights reserved. </p>
+  </div>
+</div>
+
+
+		<div class="content container">
+			<div class="post">
+			 	<h1>Plotting deprivation in Scotland, using geofacet and sf in R</h1>
+			  <span class="post-date">Sun, May 28, 2017</span>
+			      <pre class="r"><code>library(tidyverse)
+library(sf)
+library(readxl)
+library(geofacet)</code></pre>
+<pre class="r"><code>map_scot &lt;- st_read(&quot;../data/scot_gov_data/data_zone_shapefiles/.&quot;)</code></pre>
+<pre><code>## Reading layer `SG_SIMD_2016&#39; from data source `C:\Users\callu\Dropbox\blog\content\data\scot_gov_data\data_zone_shapefiles&#39; using driver `ESRI Shapefile&#39;
+## converted into: POLYGON
+## Simple feature collection with 6976 features and 49 fields
+## geometry type:  MULTIPOLYGON
+## dimension:      XY
+## bbox:           xmin: 5513 ymin: 530252.8 xmax: 470323 ymax: 1220302
+## epsg (SRID):    NA
+## proj4string:    +proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +datum=OSGB36 +units=m +no_defs</code></pre>
+<pre class="r"><code>data_postcode_simd &lt;- read_excel(&quot;../data/scot_gov_data/00505244.xlsx&quot;, sheet = 2)
+data_simd_ranks &lt;- read_excel(&quot;../data/scot_gov_data/00512735.xlsx&quot;, sheet = 3)
+
+data_simd_ranks$HBname[data_simd_ranks$HBname == &quot;Western Isles&quot;] &lt;- &quot;Western Isle&quot;</code></pre>
+<pre class="r"><code>data_simd_ranks %&gt;%
+  select(DataZone = DZ, HBname) %&gt;%
+  left_join(map_scot, .) %&gt;%
+  group_by(HBname) %&gt;%
+  mutate(mean_deprivation = mean(Rank)) %&gt;%
+  ungroup() %&gt;%
+  ggplot() +
+  geom_histogram(aes(x = Rank, y = ..ncount.., fill = mean_deprivation), binwidth = 100) +
+  facet_geo(~HBname, grid = &quot;nhs_scot_grid&quot;) +
+  theme_bw() +
+  theme(legend.position = &quot;none&quot;) </code></pre>
+<p><img src="../../../../post/2017-05-28-plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r_files/figure-html/city_deprivation_plots-1.png" width="672" /></p>
+
+			</div>
+
+			
+		</div>
+
+  </body>
+</html>
