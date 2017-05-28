@@ -49,7 +49,7 @@ So looking at this, brighter colours equal lower average levels of deprivation. 
 
 Using the geofacet package, we swap out a normal `facet_wrap()` for `facet_geo()`, and tell it what layout we want `grid=("nhs_scot_grid")`. The only problem is that this grid has "Western Isles" saved as "Western Isle", so we have to rename out own data to match this. Now our health boards are placed in roughly a geographical order.
 
-```{r geofacet_deprivation_plots, echo=TRUE, message=FALSE, warning=FALSE, fig.height=12, fig.width=8}
+```{r geofacet_deprivation_plots, echo=TRUE, message=FALSE, warning=FALSE, fig.height=10, fig.width=7}
 data_simd_ranks %>%
   select(DataZone = DZ, HBname) %>%
   left_join(map_scot, .) %>%
