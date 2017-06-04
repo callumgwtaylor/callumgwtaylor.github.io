@@ -38,8 +38,13 @@
       <description></description>
     </item>
     
-  </channel>
-</rss>€˜resourceâ€™ (the data itself). The problem for me is I donâ€™t know python, Iâ€™m not comfortable with CKAN, and struggle with JSON also.</description>
+    <item>
+      <title>R Hdxr. Hdx Package</title>
+      <link>/categories/r-hdxr.-hdx-package/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/r-hdxr.-hdx-package/</guid>
+      <description></description>
     </item>
     
   </channel>

@@ -31,6 +31,17 @@ Here’s a quick example of what it allows you to do. The visualisations in this
     </item>
     
     <item>
+      <title>Mini Package: hdxr</title>
+      <link>/2017/06/04/mini-package-hdxr/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/04/mini-package-hdxr/</guid>
+      <description>Mini package - Mini postI realised that when I wrote this post, I should do something more sensible to share the code then put the text up in a blog. Writing a package seemed overkill though, and something you only do for ‘real code’.
+But curiousity got the better of me, and after reading the go-to post for package writing, I thought I might as well try.
+So here we are: hdxr</description>
+    </item>
+    
+    <item>
       <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>
       <link>/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>

@@ -12,6 +12,11 @@
   </url>
   
   <url>
+    <loc>/2017/06/04/mini-package-hdxr/</loc>
+    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url>
@@ -108,6 +113,18 @@
   <url>
     <loc>/tags/r/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/r-hdxr.-hdx-package/</loc>
+    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r.-hdxr-hdx-package/</loc>
+    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
