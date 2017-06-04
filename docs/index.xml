@@ -61,5 +61,14 @@ Recently I’ve gone back to the same files, to see if what I’ve learnt has ma
 This is a personal site built using the blogdown package. The theme is from @spf13/hyde</description>
     </item>
     
+    <item>
+      <title>Archive</title>
+      <link>/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/archive/</guid>
+      <description> Blog Posts </description>
+    </item>
+    
   </channel>
 </rss>
