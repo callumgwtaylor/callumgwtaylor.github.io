@@ -90,7 +90,7 @@ These graphs use two datasets, the ACLED files were downloaded directly from HDX
 
 DISCLAIMER: I do not know how complete this ACLED dataset is, and do not want to pretend it paints a full and accurate picture about a subject I have no expertise in!
 
-## Static map of fatalities from violence
+## Static map of fatalities from political violence
 ```{r acled_2017, echo=FALSE, message=FALSE, warning=FALSE}
 countries <- st_as_sf(rnaturalearthdata::countries50)
 
@@ -107,7 +107,7 @@ acled_map
 ```
 
 
-## gganimate plot of fatalities from violence, seperated monthly
+## gganimate plot of fatalities from political violence, seperated monthly
 
 ![animate_acled](https://raw.githubusercontent.com/callumgwtaylor/blog/master/content/data/2017_06_04_acled_plots/acled_month.gif?token=AKjYFW8G5RtRRX6znp-Aot58SIqXRKRgks5ZPS9HwA%3D%3D)
 
