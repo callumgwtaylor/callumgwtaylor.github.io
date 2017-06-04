@@ -13,7 +13,6 @@ Description: ''
 Tags:
   - Development
   - golang
-menu: main
 ---
 
 
@@ -89,7 +88,7 @@ These graphs use two datasets, the ACLED files were downloaded directly from HDX
 DISCLAIMER: I do not know how complete this ACLED dataset is, and do not want to pretend it paints a full and accurate picture about a subject I have no expertise in!
 
 ## Static map of fatalities from violence
-```{r acled_2017, echo=FALSE, fig.height=10, message=FALSE, warning=FALSE}
+```{r acled_2017, echo=FALSE, message=FALSE, warning=FALSE}
 countries <- st_as_sf(rnaturalearthdata::countries50)
 
 acled_map <- countries %>%
@@ -107,7 +106,7 @@ acled_map
 
 ## gganimate plot of fatalities from violence, seperated monthly
 
-```{r acled_monthly, echo=FALSE, fig.height=10, message=FALSE, warning=FALSE}
+```{r acled_monthly, echo=FALSE, message=FALSE, warning=FALSE}
 acled_month <- countries %>%
   filter(continent == "Africa") %>%
 ggplot() +
@@ -117,5 +116,5 @@ ggplot() +
   labs(title = "All violence resulting in fatalities in Africa in 2017, recorded by ACLED. Month:",
        caption = "Dataset available at: https://data.humdata.org/dataset/acled-conflict-data-for-africa-realtime-2017")
 
-gganimate(acled_month, ani.width=1000, ani.height=1000)
+gganimate(acled_month, "acled_month.gif", ani.width=1000, ani.height=1000)
 ```
