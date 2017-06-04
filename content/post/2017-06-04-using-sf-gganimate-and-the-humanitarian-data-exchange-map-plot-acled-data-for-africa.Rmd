@@ -1,9 +1,9 @@
 ---
 title: Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data
-  for Africa in 2017
+  for Africa
 author: ~
 date: '2017-06-04'
-slug: using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa-in-2017
+slug: using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa-
 categories: []
 tags: [R, HDX, map, sf, gganimate]
 Categories:
@@ -18,7 +18,7 @@ Tags:
   - gganimate
 ---
 
-## Mapping fatalities from violence in Africa
+## Mapping fatalities from violence in Africa in 2017
 
 In my previous [post](https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/) I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.
 
