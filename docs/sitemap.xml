@@ -2,17 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</loc>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2017/06/04/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2017/06/04/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa-in-2017/</loc>
     <lastmod>2017-06-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -34,7 +29,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -51,8 +46,14 @@
   </url>
   
   <url>
+    <loc>/tags/development/</loc>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/development/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -63,14 +64,14 @@
   </url>
   
   <url>
-    <loc>/tags/gganimate/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <loc>/tags/golang/</loc>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/golang/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -93,14 +94,8 @@
   </url>
   
   <url>
-    <loc>/tags/mapping/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/post/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -130,7 +125,7 @@
   
   <url>
     <loc>/tags/sf/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

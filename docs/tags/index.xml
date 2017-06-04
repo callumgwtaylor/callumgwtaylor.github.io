@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Development</title>
+      <link>/tags/development/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Geofacet</title>
       <link>/tags/geofacet/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
@@ -30,11 +39,11 @@
     </item>
     
     <item>
-      <title>Gganimate</title>
-      <link>/tags/gganimate/</link>
-      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      <title>Golang</title>
+      <link>/tags/golang/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/gganimate/</guid>
+      <guid>/tags/golang/</guid>
       <description></description>
     </item>
     
@@ -62,15 +71,6 @@
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/json/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mapping</title>
-      <link>/tags/mapping/</link>
-      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/mapping/</guid>
       <description></description>
     </item>
     
@@ -113,7 +113,7 @@
     <item>
       <title>Sf</title>
       <link>/tags/sf/</link>
-      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/sf/</guid>
       <description></description>

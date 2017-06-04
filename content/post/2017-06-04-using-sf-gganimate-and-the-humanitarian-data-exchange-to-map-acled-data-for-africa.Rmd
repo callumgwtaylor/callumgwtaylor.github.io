@@ -1,22 +1,21 @@
 ---
-title: Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data
-  for Africa
+title: Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for
+  Africa
 author: ~
-date: '2017-06-04'
-slug: using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa-
+date: '2017-06-05'
+slug: using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa
 categories: []
-tags: [R, HDX, map, sf, gganimate]
+tags: []
 Categories:
   - Development
   - GoLang
 Description: ''
 Tags:
-  - R
-  - HDX
-  - mapping
-  - sf
-  - gganimate
+  - Development
+  - golang
+menu: main
 ---
+
 
 ## Mapping fatalities from violence in Africa in 2017
 

@@ -46,6 +46,8 @@
       
         <li><a href="https://twitter.com/callumgwt"> Twitter </a></li>
       
+        <li><a href="./2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/"> Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa </a></li>
+      
     </ul>
 
     <p>&copy; 2017. All rights reserved. </p>
@@ -57,6 +59,34 @@
 <div class="posts">
 
       
+  <div class="post">
+    <h1 class="post-title">
+      <a href="./2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/">
+        Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa
+      </a>
+    </h1>
+
+    <span class="post-date">Mon, Jun 5, 2017</span>
+
+    <div id="mapping-fatalities-from-violence-in-africa-in-2017" class="section level2">
+<h2>Mapping fatalities from violence in Africa in 2017</h2>
+<p>In my previous <a href="https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/">post</a> I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.</p>
+<p>Here’s a quick example of what it allows you to do. The visualisations in this aren’t pretty, it’s mainly meant as an example of what you can easily do. I’m really enjoying using <code>sf</code> to plot maps in ggplot2, thanks to <a href="http://strimas.com/r/tidy-sf/">Matt Strimas-Mackey</a> showing how to get that working.</p>
+<p>The code to run this example is on my github in an R markdown file.</p>
+<p>These graphs use two datasets, the ACLED files were downloaded directly from HDX. I then was able to filter out just events with fatalities, and just for 2017. The shapefiles are from the <code>rnaturalearth</code> package.</p>
+<p>DISCLAIMER: I do not know how complete this ACLED dataset is, and do not want to pretend it paints a full and accurate picture about a subject I have no expertise in!</p>
+</div>
+<div id="static-map-of-fatalities-from-violence" class="section level2">
+<h2>Static map of fatalities from violence</h2>
+<p><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_2017-1.png" width="672" /></p>
+</div>
+<div id="gganimate-plot-of-fatalities-from-violence-seperated-monthly" class="section level2">
+<h2>gganimate plot of fatalities from violence, seperated monthly</h2>
+<p><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_monthly-1.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_monthly-2.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_monthly-3.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_monthly-4.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_monthly-5.png" width="672" /></p>
+</div>
+
+  </div>
+  
   <div class="post">
     <h1 class="post-title">
       <a href="./2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/">
@@ -168,62 +198,6 @@ GET(url, write_disk(&quot;dataset.xlsx&quot;, overwrite=TRUE))</code></pre>
 <pre class="r"><code>ACLED_CONFLICT_DATA &lt;- read_excel(&quot;dataset.xlsx&quot;, col_names = TRUE)
 rm(url)</code></pre>
 </div>
-</div>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="./2017/06/04/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/">
-        Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa
-      </a>
-    </h1>
-
-    <span class="post-date">Sun, Jun 4, 2017</span>
-
-    <div id="mapping-fatalities-from-violence-in-africa-in-2017" class="section level2">
-<h2>Mapping fatalities from violence in Africa in 2017</h2>
-<p>In my previous <a href="https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/">post</a> I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.</p>
-<p>Here’s a quick example of what it allows you to do. The visualisations in this aren’t pretty, it’s mainly meant as an example of what you can easily do. I’m really enjoying using <code>sf</code> to plot maps in ggplot2, thanks to <a href="http://strimas.com/r/tidy-sf/">Matt Strimas-Mackey</a> showing how to get that working.</p>
-<p>The code to run this example is on my github in an R markdown file.</p>
-<p>These graphs use two datasets, the ACLED files were downloaded directly from HDX. I then was able to filter out just events with fatalities, and just for 2017. The shapefiles are from the <code>rnaturalearth</code> package.</p>
-<p>DISCLAIMER: I do not know how complete this ACLED dataset is, and do not want to pretend it paints a full and accurate picture about a subject I have no expertise in!</p>
-</div>
-<div id="static-map-of-fatalities-from-violence" class="section level2">
-<h2>Static map of fatalities from violence</h2>
-<p><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa_files/figure-html/acled_2017-1.png" width="672" /></p>
-</div>
-<div id="gganimate-plot-of-fatalities-from-violence-seperated-monthly" class="section level2">
-<h2>gganimate plot of fatalities from violence, seperated monthly</h2>
-<p><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa_files/figure-html/acled_monthly-1.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa_files/figure-html/acled_monthly-2.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa_files/figure-html/acled_monthly-3.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa_files/figure-html/acled_monthly-4.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa_files/figure-html/acled_monthly-5.png" width="672" /></p>
-</div>
-
-  </div>
-  
-  <div class="post">
-    <h1 class="post-title">
-      <a href="./2017/06/04/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa-in-2017/">
-        Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa in 2017
-      </a>
-    </h1>
-
-    <span class="post-date">Sun, Jun 4, 2017</span>
-
-    <div id="mapping-fatalities-from-violence-in-africa" class="section level2">
-<h2>Mapping fatalities from violence in Africa</h2>
-<p>In my previous <a href="https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/">post</a> I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.</p>
-<p>Here’s a quick example of what it allows you to do. The visualisations in this aren’t pretty, it’s mainly meant as an example of what you can easily do. I’m really enjoying using <code>sf</code> to plot maps in ggplot2, thanks to <a href="http://strimas.com/r/tidy-sf/">Matt Strimas-Mackey</a> showing how to get that working.</p>
-<p>The code to run this example is on my github in an R markdown file.</p>
-<p>These graphs use two datasets, the ACLED files were downloaded directly from HDX. I then was able to filter out just events with fatalities, and just for 2017. The shapefiles are from the <code>rnaturalearth</code> package.</p>
-<p>DISCLAIMER: I do not know how complete this ACLED dataset is, and do not want to pretend it paints a full and accurate picture about a subject I have no expertise in!</p>
-</div>
-<div id="static-map-of-fatalities-from-violence" class="section level2">
-<h2>Static map of fatalities from violence</h2>
-<p><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa-in-2017_files/figure-html/acled_2017-1.png" width="672" /></p>
-</div>
-<div id="gganimate-plot-of-fatalities-from-violence-seperated-monthly" class="section level2">
-<h2>gganimate plot of fatalities from violence, seperated monthly</h2>
-<p><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa-in-2017_files/figure-html/acled_monthly-1.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa-in-2017_files/figure-html/acled_monthly-2.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa-in-2017_files/figure-html/acled_monthly-3.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa-in-2017_files/figure-html/acled_monthly-4.png" width="672" /><img src="./post/2017-06-04-using-sf-gganimate-and-the-humanitarian-data-exchange-map-plot-acled-data-for-africa-in-2017_files/figure-html/acled_monthly-5.png" width="672" /></p>
 </div>
 
   </div>
