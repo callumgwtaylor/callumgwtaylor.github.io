@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://callumgwtaylor.github.io/blog/"
 relativeurls = true
 languageCode = "en-us"
 title = "Callum Taylor"
