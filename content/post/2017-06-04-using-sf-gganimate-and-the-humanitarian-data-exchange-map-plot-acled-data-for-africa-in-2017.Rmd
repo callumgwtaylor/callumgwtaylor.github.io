@@ -1,0 +1,122 @@
+---
+title: Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data
+  for Africa in 2017
+author: ~
+date: '2017-06-04'
+slug: using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa-in-2017
+categories: []
+tags: [R, HDX, map, sf, gganimate]
+Categories:
+  - Development
+  - GoLang
+Description: ''
+Tags:
+  - R
+  - HDX
+  - mapping
+  - sf
+  - gganimate
+---
+
+## Mapping fatalities from violence in Africa
+
+In my previous [post](https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/) I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.
+
+Here's a quick example of what it allows you to do. The visualisations in this aren't pretty, it's mainly meant as an example of what you can easily do. I'm really enjoying using `sf` to plot maps in ggplot2, thanks to [Matt Strimas-Mackey](http://strimas.com/r/tidy-sf/) showing how to get that working.
+
+The code to run this example is on my github in an R markdown file.
+
+
+
+```{r data_frame, message=FALSE, warning=FALSE, include=FALSE}
+library(ckanr)
+library(tidyverse)
+library(tidyjson)
+
+library(readxl)
+library(httr)
+library(rnaturalearth)
+library(sf)
+library(gganimate)
+library(ggplot2)
+library(stringr)
+
+hdx_connect <- function(){
+ckanr_setup(url = "http://data.humdata.org/")
+}
+
+hdx_list <- function(limit){
+package_list(as = 'table', limit = limit) %>%
+as_data_frame(.)
+}
+
+hdx_package_search <- function(term){
+package_search(q = term, as = "json") %>%
+    jsonlite::fromJSON(., flatten = TRUE) %>%
+    .$result %>%
+    .$results 
+}
+
+hdx_resource_list <- function(package){
+package$resources %>%
+    as.data.frame(.) %>%
+    left_join(package, ., by = c("id" = "package_id")) %>%
+    select(-resources)
+}
+
+hdx_connect()
+
+hum_data_packages <- hdx_package_search("ACLED Conflict Data for Africa") %>%
+  filter(title == "ACLED Conflict Data for Africa (Realtime - 2017)")
+
+hum_data_resources <- hdx_resource_list(hum_data_packages) %>%
+  filter(format == "XLSX")
+```
+
+
+```{r download_resources, message=FALSE, warning=FALSE, include=FALSE}
+url <- hum_data_resources$hdx_rel_url
+GET(url, write_disk("dataset.xlsx", overwrite=TRUE))
+ACLED_CONFLICT_DATA <- read_excel("dataset.xlsx", col_names = TRUE) %>%
+  mutate(event_type = str_to_lower(EVENT_TYPE)) %>%
+  filter(FATALITIES > 0) %>%
+  filter(YEAR == 2017) %>%
+  separate(EVENT_DATE, c("year", "month", "day"))
+rm(url)
+```
+
+These graphs use two datasets, the ACLED files were downloaded directly from HDX. I then was able to filter out just events with fatalities, and just for 2017. The shapefiles are from the `rnaturalearth` package.
+
+DISCLAIMER: I do not know how complete this ACLED dataset is, and do not want to pretend it paints a full and accurate picture about a subject I have no expertise in!
+
+## Static map of fatalities from violence
+```{r acled_2017, echo=FALSE, fig.height=10, message=FALSE, warning=FALSE}
+countries <- st_as_sf(rnaturalearthdata::countries50)
+
+acled_map <- countries %>%
+  filter(continent == "Africa") %>%
+ggplot() +
+  geom_sf() + 
+  geom_point(aes(x = LONGITUDE, y = LATITUDE, size = FATALITIES, colour = event_type), data = ACLED_CONFLICT_DATA) +
+  theme_minimal() +
+  labs(title = "All violence resulting in fatalities in Africa in 2017, recorded by ACLED",
+       caption = "Dataset available at: https://data.humdata.org/dataset/acled-conflict-data-for-africa-realtime-2017")
+
+acled_map
+```
+
+
+## gganimate plot of fatalities from violence, seperated monthly
+
+```{r acled_monthly, echo=FALSE, fig.height=10, message=FALSE, warning=FALSE}
+acled_month <- countries %>%
+  filter(continent == "Africa") %>%
+ggplot() +
+  geom_sf() + 
+  geom_point(aes(x = LONGITUDE, y = LATITUDE, size = FATALITIES, colour = event_type, frame = month), data = ACLED_CONFLICT_DATA) +
+  theme_minimal() +
+  labs(title = "All violence resulting in fatalities in Africa in 2017, recorded by ACLED. Month:",
+       caption = "Dataset available at: https://data.humdata.org/dataset/acled-conflict-data-for-africa-realtime-2017")
+
+gganimate(acled_month, ani.width=1000, ani.height=1000)
+```
