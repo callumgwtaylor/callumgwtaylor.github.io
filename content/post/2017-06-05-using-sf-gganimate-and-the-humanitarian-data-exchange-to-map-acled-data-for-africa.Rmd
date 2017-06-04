@@ -106,6 +106,9 @@ acled_map
 
 ## gganimate plot of fatalities from violence, seperated monthly
 
+![](https://github.com/callumgwtaylor/blog/blob/master/content/data/2017_06_04_acled_plots/acled_month.gif)
+
+
 ```{r acled_monthly, echo=FALSE, message=FALSE, warning=FALSE}
 acled_month <- countries %>%
   filter(continent == "Africa") %>%
