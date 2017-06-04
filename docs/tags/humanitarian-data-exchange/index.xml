@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Callum Taylor</title>
-    <link>/categories/</link>
-    <description>Recent content on Callum Taylor</description>
+    <title>Humanitarian Data Exchange on Callum Taylor</title>
+    <link>/tags/humanitarian-data-exchange/</link>
+    <description>Recent content in Humanitarian Data Exchange on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/humanitarian-data-exchange/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

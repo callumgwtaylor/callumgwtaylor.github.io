@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting data from Humanitarian Data Exchange in a reproducible R pipeline</title>
+      <link>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>
+      <description>I’ve been trying to make it easier for me to get information from the Humanitarian Data Exchange. The folk who run the centre have been trying to make it easier to access too, they’ve released a python api, and they use CKAN so you can download JSON information about each ‘package’ (basically the subject of the data) and each ‘resource’ (the data itself). The problem for me is I don’t know python, I’m not comfortable with CKAN, and struggle with JSON also.</description>
+    </item>
     
     <item>
       <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>

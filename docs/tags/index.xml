@@ -30,6 +30,33 @@
     </item>
     
     <item>
+      <title>Hdx</title>
+      <link>/tags/hdx/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hdx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Humanitarian Data Exchange</title>
+      <link>/tags/humanitarian-data-exchange/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/humanitarian-data-exchange/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Json</title>
+      <link>/tags/json/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Public Health</title>
       <link>/tags/public-health/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
@@ -41,9 +68,18 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reproducible</title>
+      <link>/tags/reproducible/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/reproducible/</guid>
       <description></description>
     </item>
     

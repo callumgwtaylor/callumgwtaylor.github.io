@@ -1,0 +1,135 @@
+---
+title: Getting data from Humanitarian Data Exchange in a reproducible R pipeline
+author: ~
+date: '2017-06-04'
+slug: getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline
+categories: []
+tags: []
+Categories: ''
+Description: ''
+Tags:
+  - R
+  - reproducible
+  - Humanitarian Data Exchange
+  - HDX
+  - JSON
+---
+
+I've been trying to make it easier for me to get information from the [Humanitarian Data Exchange](https://data.humdata.org/). The folk who run the centre have been trying to make it easier to access too, they've released a [python api](https://github.com/OCHA-DAP/hdx-python-api), and they use CKAN so you can download JSON information about each 'package' (basically the subject of the data) and each 'resource' (the data itself). The problem for me is I don't know python, I'm not comfortable with CKAN, and struggle with JSON also.
+
+All I wanted to be able to do was search for a package, and download a specific resourse, in a reproducible and roughly tidy-ish fashion
+
+I've made a couple of functions to make it easier to do so. I've been using `ckanr` and `jsonlite`
+
+So here are the functions I've made, and an example of using them:
+
+## Functions for interacting with the HDX CKAN
+
+
+```{r package, echo=TRUE, warning = FALSE, message=FALSE}
+library(ckanr)
+library(tidyverse)
+library(jsonlite)
+```
+
+
+### hdx_connect()
+
+This will use the `ckanr` package to connect to the HDX ckan server.
+
+```{r hdx_connect, echo=TRUE, warning = FALSE}
+# This creates a function to connect to the hdx server
+hdx_connect <- function(){
+ckanr_setup(url = "http://data.humdata.org/")
+}
+```
+
+### hdx_list()
+
+This function takes one argument, limit. It will return a list of HDX packages, depending on the limit set. There's currently almost 5000 packages.
+
+```{r hdx_list, echo=TRUE, warning = FALSE}
+# This function will create a data frame of the length set in x, listing the packages in x
+hdx_list <- function(limit){
+package_list(as = 'table', limit = limit) %>%
+as_data_frame(.)
+}
+``` 
+
+
+### hdx_package_search()
+
+So after seeing roughly which package you want to look at, either through the package list, or browsing on the website, you would search for it through this function.
+
+This will return a dataframe, with some nested lists, and nested dataframes. It's reasonably easy to browse to then work out exactly which package you want.
+
+```{r hdx_package_search}
+hdx_package_search <- function(term){
+package_search(q = term, as = "json") %>%
+    jsonlite::fromJSON(., flatten = TRUE) %>%
+    .$result %>%
+    .$results 
+}
+```
+
+### hdx_resource_list()
+
+To see the exact resources available in an easier-to-read dataframe they need unnesting. When this function is used on the results of `hdx_package_search()`, it will extract a resources dataframe, then left join the results onto the original dataframe provided to it.
+
+```{r hdx_resource_list}
+# This function will take the results of a package_search and extract the resources, it will then link those resources to the results from package search giving a new data frame
+hdx_resource_list <- function(package){
+package$resources %>%
+    as.data.frame(.) %>%
+    left_join(package, ., by = c("id" = "package_id")) %>%
+    select(-resources)
+}
+```
+
+## Getting data off of HDX
+
+Once you've used all the functions, you should have a dataframe with titles for the packages, and urls for the resources.
+You can then use `httr` or `readr` to download the files and bring them into your work.
+
+### Example: Exploring the ACLED Conflict Data for Africa
+
+In this example I am going to identify the package "ACLED Conflict Data for Africa (Realtime - 2017)" [*here*](https://data.humdata.org/dataset/acled-conflict-data-for-africa-realtime-2017). It has an excel file, and a zipped csv. I'll then identify the resource for the unzipped excel file.
+
+Once we have that, we can use `httr` to download the file, and `readxl`to load it in.
+
+```{r packages, echo=TRUE, warning = FALSE, message=FALSE}
+library(ckanr)
+library(tidyverse)
+library(jsonlite)
+library(readxl)
+library(httr)
+```
+
+```{r finding_package_and_resource, echo=TRUE, warning = FALSE, message=FALSE}
+
+# First we connect to HDX
+
+hdx_connect()
+
+# We can list all packages available for us
+
+hdx_list(5000)
+
+# We then search for the package we want, and use dplyr to filter it to the exact package
+
+hum_data_packages <- hdx_package_search("ACLED Conflict Data for Africa") %>%
+  filter(title == "ACLED Conflict Data for Africa (Realtime - 2017)")
+
+# We then expand our resources from the search result, and look for the unzipped excel file
+
+hum_data_resources <- hdx_resource_list(hum_data_packages) %>%
+  filter(format == "XLSX")
+```
+
+```{r download_resources, echo=TRUE, message=FALSE}
+url <- hum_data_resources$hdx_rel_url
+GET(url, write_disk("dataset.xlsx", overwrite=TRUE))
+ACLED_CONFLICT_DATA <- read_excel("dataset.xlsx", col_names = TRUE)
+rm(url)
+```
+
