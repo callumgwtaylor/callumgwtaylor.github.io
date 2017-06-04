@@ -5,14 +5,17 @@ author: ~
 date: '2017-06-05'
 slug: using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa
 categories: []
-tags: []
+tags: [R, maps, datascience, acled, hdx, sf, gganimate]
 Categories:
   - Development
   - GoLang
 Description: ''
 Tags:
-  - Development
-  - golang
+  - R
+  - ACLED
+  - HDX
+  - sf
+  - gganimate
 ---
 
 
@@ -22,7 +25,7 @@ In my previous [post](https://callumgwtaylor.github.io/blog/2017/06/04/getting-d
 
 Here's a quick example of what it allows you to do. The visualisations in this aren't pretty, it's mainly meant as an example of what you can easily do. I'm really enjoying using `sf` to plot maps in ggplot2, thanks to [Matt Strimas-Mackey](http://strimas.com/r/tidy-sf/) showing how to get that working.
 
-The code to run this example is on my github in an R markdown file.
+The code to run this example is on my github in an R markdown [file](https://github.com/callumgwtaylor/blog/blob/master/content/post/2017-06-05-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa.Rmd).
 
 
 

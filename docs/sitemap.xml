@@ -28,6 +28,12 @@
   </url>
   
   <url>
+    <loc>/tags/acled/</loc>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -46,12 +52,6 @@
   </url>
   
   <url>
-    <loc>/tags/development/</loc>
-    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/development/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -64,7 +64,7 @@
   </url>
   
   <url>
-    <loc>/tags/golang/</loc>
+    <loc>/tags/gganimate/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -77,7 +77,7 @@
   
   <url>
     <loc>/tags/hdx/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -107,7 +107,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -125,13 +125,13 @@
   
   <url>
     <loc>/tags/sf/</loc>
-    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2017-05-29T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
