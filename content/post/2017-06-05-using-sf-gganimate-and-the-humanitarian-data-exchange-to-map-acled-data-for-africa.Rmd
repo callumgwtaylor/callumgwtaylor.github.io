@@ -106,7 +106,7 @@ acled_map
 
 ## gganimate plot of fatalities from violence, seperated monthly
 
-![animate_acled](https://github.com/callumgwtaylor/blog/blob/master/content/data/2017_06_04_acled_plots/acled_month.gif)
+![animate_acled](https://github.com/callumgwtaylor/blog/blob/master/content/data/2017_06_04_acled_plots/acled_month.gif?raw=true)
 
 
 ```{r acled_monthly, echo=FALSE, message=FALSE, warning=FALSE}
