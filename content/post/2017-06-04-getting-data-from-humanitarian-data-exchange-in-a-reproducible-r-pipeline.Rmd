@@ -17,7 +17,7 @@ Tags:
 
 
 **Update**: I've updated a couple of these functions, as they were messy and unreliable (they probably still are!).
-I've also put them together as a mini-package that you can install from github: [hdxr](https://github.com/callumgwtaylor/hdxr)
+I've also put them together as a mini-package that you can install from github: [hdxr](https://github.com/callumgwtaylor/hdxr). The code below is the OLD version, the up to date versions are on github.
 If you've ideas on how I should do it better, please let me know on github/twitter.
 
 

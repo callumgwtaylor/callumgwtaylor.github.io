@@ -1,23 +1,8 @@
----
-title: Getting data from Humanitarian Data Exchange in a reproducible R pipeline
-author: ~
-date: '2017-06-04'
-slug: getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline
-categories: []
-tags: []
-Categories: ''
-Description: ''
-Tags:
-  - R
-  - reproducible
-  - Humanitarian Data Exchange
-  - HDX
-  - JSON
----
+<!-- BLOGDOWN-HEAD -->
+<!-- /BLOGDOWN-HEAD -->
 
 
-
-<p><strong>Update</strong>: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from gitub: <a href="https://github.com/callumgwtaylor/hdxr">hdxr</a> If you’ve ideas on how I should do it better, please let me know on github/twitter.</p>
+<p><strong>Update</strong>: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from github: <a href="https://github.com/callumgwtaylor/hdxr">hdxr</a>. The code below is the OLD version, the up to date versions are on github. If you’ve ideas on how I should do it better, please let me know on github/twitter.</p>
 <p>I’ve been trying to make it easier for me to get information from the <a href="https://data.humdata.org/">Humanitarian Data Exchange</a>. The folk who run the centre have been trying to make it easier to access too, they’ve released a <a href="https://github.com/OCHA-DAP/hdx-python-api">python api</a>, and they use CKAN so you can download JSON information about each ‘package’ (basically the subject of the data) and each ‘resource’ (the data itself). The problem for me is I don’t know python, I’m not comfortable with CKAN, and struggle with JSON also.</p>
 <p>All I wanted to be able to do was search for a package, and download a specific resourse, in a reproducible and roughly tidy-ish fashion</p>
 <p>I’ve made a couple of functions to make it easier to do so. I’ve been using <code>ckanr</code> and <code>jsonlite</code></p>
@@ -112,7 +97,7 @@ hum_data_resources &lt;- hdx_resource_list(hum_data_packages) %&gt;%
 <pre class="r"><code>url &lt;- hum_data_resources$hdx_rel_url
 GET(url, write_disk(&quot;dataset.xlsx&quot;, overwrite=TRUE))</code></pre>
 <pre><code>## Response [http://www.acleddata.com/wp-content/uploads/2017/06/ACLED-All-Africa-File_20170101-to-20170603.xlsx]
-##   Date: 2017-06-06 17:36
+##   Date: 2017-06-06 17:52
 ##   Status: 200
 ##   Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 ##   Size: 1.73 MB
