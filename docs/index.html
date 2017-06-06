@@ -109,7 +109,8 @@
 
     <span class="post-date">Sun, Jun 4, 2017</span>
 
-    <p>I’ve been trying to make it easier for me to get information from the <a href="https://data.humdata.org/">Humanitarian Data Exchange</a>. The folk who run the centre have been trying to make it easier to access too, they’ve released a <a href="https://github.com/OCHA-DAP/hdx-python-api">python api</a>, and they use CKAN so you can download JSON information about each ‘package’ (basically the subject of the data) and each ‘resource’ (the data itself). The problem for me is I don’t know python, I’m not comfortable with CKAN, and struggle with JSON also.</p>
+    <p><strong>Update</strong>: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from gitub: <a href="https://github.com/callumgwtaylor/hdxr">hdxr</a> If you’ve ideas on how I should do it better, please let me know on github/twitter.</p>
+<p>I’ve been trying to make it easier for me to get information from the <a href="https://data.humdata.org/">Humanitarian Data Exchange</a>. The folk who run the centre have been trying to make it easier to access too, they’ve released a <a href="https://github.com/OCHA-DAP/hdx-python-api">python api</a>, and they use CKAN so you can download JSON information about each ‘package’ (basically the subject of the data) and each ‘resource’ (the data itself). The problem for me is I don’t know python, I’m not comfortable with CKAN, and struggle with JSON also.</p>
 <p>All I wanted to be able to do was search for a package, and download a specific resourse, in a reproducible and roughly tidy-ish fashion</p>
 <p>I’ve made a couple of functions to make it easier to do so. I’ve been using <code>ckanr</code> and <code>jsonlite</code></p>
 <p>So here are the functions I’ve made, and an example of using them:</p>
@@ -177,7 +178,7 @@ hdx_connect()
 # We can list all packages available for us
 
 hdx_list(5000)</code></pre>
-<pre><code>## # A tibble: 4,627 x 1
+<pre><code>## # A tibble: 4,636 x 1
 ##                                                                          value
 ##                                                                          &lt;chr&gt;
 ##  1                                       141121-sierra-leone-health-facilities
@@ -190,7 +191,7 @@ hdx_list(5000)</code></pre>
 ##  8                                        2014-2015-food-security-ipc-analysis
 ##  9                         2014-nutrition-smart-survey-results-and-2015-trends
 ## 10                                 2015-humanitarian-needs-overview-indicators
-## # ... with 4,617 more rows</code></pre>
+## # ... with 4,626 more rows</code></pre>
 <pre class="r"><code># We then search for the package we want, and use dplyr to filter it to the exact package
 
 hum_data_packages &lt;- hdx_package_search(&quot;ACLED Conflict Data for Africa&quot;) %&gt;%
@@ -202,11 +203,11 @@ hum_data_resources &lt;- hdx_resource_list(hum_data_packages) %&gt;%
   filter(format == &quot;XLSX&quot;)</code></pre>
 <pre class="r"><code>url &lt;- hum_data_resources$hdx_rel_url
 GET(url, write_disk(&quot;dataset.xlsx&quot;, overwrite=TRUE))</code></pre>
-<pre><code>## Response [http://www.acleddata.com/wp-content/uploads/2017/05/ACLED-All-Africa-File_20170101-to-20170527.xlsx]
-##   Date: 2017-06-04 17:04
+<pre><code>## Response [http://www.acleddata.com/wp-content/uploads/2017/06/ACLED-All-Africa-File_20170101-to-20170603.xlsx]
+##   Date: 2017-06-06 17:36
 ##   Status: 200
 ##   Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-##   Size: 1.66 MB
+##   Size: 1.73 MB
 ## &lt;ON DISK&gt;  C:\Users\callu\Dropbox\blog\content\post\dataset.xlsx</code></pre>
 <pre class="r"><code>ACLED_CONFLICT_DATA &lt;- read_excel(&quot;dataset.xlsx&quot;, col_names = TRUE)
 rm(url)</code></pre>
