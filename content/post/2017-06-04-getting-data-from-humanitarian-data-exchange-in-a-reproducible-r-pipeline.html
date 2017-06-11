@@ -1,5 +1,20 @@
-<!-- BLOGDOWN-HEAD -->
-<!-- /BLOGDOWN-HEAD -->
+---
+title: Getting data from Humanitarian Data Exchange in a reproducible R pipeline
+author: ~
+date: '2017-06-04'
+slug: getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline
+categories: []
+tags: []
+Categories: ''
+Description: ''
+Tags:
+  - R
+  - reproducible
+  - Humanitarian Data Exchange
+  - HDX
+  - JSON
+---
+
 
 
 <p><strong>Update</strong>: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from github: <a href="https://github.com/callumgwtaylor/hdxr">hdxr</a>. The code below is the OLD version, the up to date versions are on github. If you’ve ideas on how I should do it better, please let me know on github/twitter.</p>
@@ -71,7 +86,7 @@ hdx_connect()
 # We can list all packages available for us
 
 hdx_list(5000)</code></pre>
-<pre><code>## # A tibble: 4,636 x 1
+<pre><code>## # A tibble: 4,640 x 1
 ##                                                                          value
 ##                                                                          &lt;chr&gt;
 ##  1                                       141121-sierra-leone-health-facilities
@@ -84,7 +99,7 @@ hdx_list(5000)</code></pre>
 ##  8                                        2014-2015-food-security-ipc-analysis
 ##  9                         2014-nutrition-smart-survey-results-and-2015-trends
 ## 10                                 2015-humanitarian-needs-overview-indicators
-## # ... with 4,626 more rows</code></pre>
+## # ... with 4,630 more rows</code></pre>
 <pre class="r"><code># We then search for the package we want, and use dplyr to filter it to the exact package
 
 hum_data_packages &lt;- hdx_package_search(&quot;ACLED Conflict Data for Africa&quot;) %&gt;%
@@ -97,7 +112,7 @@ hum_data_resources &lt;- hdx_resource_list(hum_data_packages) %&gt;%
 <pre class="r"><code>url &lt;- hum_data_resources$hdx_rel_url
 GET(url, write_disk(&quot;dataset.xlsx&quot;, overwrite=TRUE))</code></pre>
 <pre><code>## Response [http://www.acleddata.com/wp-content/uploads/2017/06/ACLED-All-Africa-File_20170101-to-20170603.xlsx]
-##   Date: 2017-06-06 17:52
+##   Date: 2017-06-11 16:25
 ##   Status: 200
 ##   Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 ##   Size: 1.73 MB

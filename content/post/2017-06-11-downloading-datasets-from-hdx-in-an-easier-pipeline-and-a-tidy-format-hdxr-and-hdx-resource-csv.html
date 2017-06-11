@@ -1,0 +1,61 @@
+---
+title: 'Downloading datasets from HDX in an easier pipeline and a tidy format hdxr and hdx_resource_csv'
+author: ~
+date: '2017-06-11'
+slug: downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr-and-hdx-resource-csv
+categories: []
+tags: []
+Categories: R
+Description: ''
+Tags: R, hdxr, tidyverse, ckanr
+---
+
+
+
+<div id="an-easier-pipeline-for-humanitarian-data-exchange-with-a-tidy-format" class="section level2">
+<h2>An easier pipeline for Humanitarian Data Exchange, with a tidy format</h2>
+<p>I’ve been trying to make it easier to extract data from HDX in R, using tidyverse packages. I’ve started compiling a mini-package called hdxr that wraps these pipelines up neatly. I’ve added a new function today <code>hdx_resource_csv</code> that means to download datasets from HDX all you need to do is the following:</p>
+<pre><code>library(hdxr)
+hdx_connect()
+datasets &lt;- hdx_package_search(term = &quot;141121-sierra-leone-health-facilities&quot;) %&gt;%
+  hdx_resource_list() %&gt;%
+  hdx_resource_csv()</code></pre>
+<p>I’ve described most of these functions in previous <a href="https://callumgwtaylor.github.io/blog/2017/06/04/mini-package-hdxr/">posts</a>, but basically:</p>
+<p><code>hdx_connect</code> uses <code>ckanr</code> to connect to the hdx ckan server</p>
+<p><code>hdx_package_search</code> will search hdx for the packages you’re looking for and return a dataframe. (You can use <code>hdx_list</code> to find titles of datasets)</p>
+<p><code>hdx_resource_list</code> will take that dataframe and use <code>tidyverse</code> features to extract information about the datasets themselves.</p>
+<div id="hdx_resource_csv" class="section level3">
+<h3>hdx_resource_csv</h3>
+<p>The new function <code>hdx_resource_csv</code> will take the results of <code>hdx_resource_list</code>, and return a new dataframe. This will have three columns:</p>
+<ul>
+<li><strong>identifier</strong> this has a title merged from the package and dataset titles</li>
+<li><strong>location</strong> this is the url where the csv was downloaded from</li>
+<li><strong>csv</strong> this is a nested dataframe downloaded from the location url</li>
+</ul>
+<p>hdx_resource_csv provides a nested dataframe column to allow a sensible output when you download multiple csvs all with different columns in one go.</p>
+<p>When you want to extract a particular csv to work with, you can use <code>dplyr::filter()</code> and <code>tidyr::unnest()</code> to get at it. You could just unnest without filtering, but when every csv has different column titles, the output is a bit messy.</p>
+<div id="example" class="section level4">
+<h4>Example:</h4>
+<pre class="r"><code>library(tidyverse)
+library(hdxr)
+hdx_connect()
+datasets &lt;- hdx_package_search(term = &quot;141121-sierra-leone-health-facilities&quot;) %&gt;%
+  hdx_resource_list() %&gt;%
+  hdx_resource_csv()</code></pre>
+<p>The above would give us a dataframe that looks like: <img src="https://raw.githubusercontent.com/callumgwtaylor/blog/master/content/data/2017_06_11_pipelines/example_output.png?token=AKjYFXSVM3_lBhDeWmg3bNygg9C2gPqJks5ZRqgUwA%3D%3D" /></p>
+<p>you can then select what you want with filter and unnest it:</p>
+<pre class="r"><code>sierra_leone_healthsites_sbtf_sle_health &lt;- datasets %&gt;%
+  filter(dataset_identifier == &quot;sierra-leone-healthsites_sbtf-sle-health&quot;) %&gt;%
+  unnest()</code></pre>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/callumgwtaylor/blog/master/content/data/2017_06_11_pipelines/example_dataframe.png?token=AKjYFWJnUiBkJelzKrCGj40n_t_ZJFAKks5ZRqg9wA%3D%3D" />
+
+</div>
+</div>
+<div id="any-use-wrong-way-of-doing-things" class="section level4">
+<h4>Any use? Wrong way of doing things?</h4>
+<p>I think this pipeline makes sense for me to extract data from HDX. And the majority of files on there are CSV. If you’ve thoughts of how I should do it differently, please let me know either on <a href="https://github.com/callumgwtaylor/hdxr">github</a> directly or just through <a href="https://twitter.com/CallumGWT">twitter</a></p>
+<p>If you want to try it yourself, download and installation instructions are on the <a href="https://github.com/callumgwtaylor/hdxr">github readme</a>.</p>
+</div>
+</div>
+</div>

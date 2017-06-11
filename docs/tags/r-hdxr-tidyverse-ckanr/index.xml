@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Callum Taylor</title>
-    <link>/categories/r/</link>
-    <description>Recent content in R on Callum Taylor</description>
+    <title>R Hdxr Tidyverse Ckanr on Callum Taylor</title>
+    <link>/tags/r-hdxr-tidyverse-ckanr/</link>
+    <description>Recent content in R Hdxr Tidyverse Ckanr on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/r-hdxr-tidyverse-ckanr/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

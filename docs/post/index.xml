@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Downloading datasets from HDX in an easier pipeline and a tidy format hdxr and hdx_resource_csv</title>
+      <link>/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr-and-hdx-resource-csv/</link>
+      <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr-and-hdx-resource-csv/</guid>
+      <description>An easier pipeline for Humanitarian Data Exchange, with a tidy formatI’ve been trying to make it easier to extract data from HDX in R, using tidyverse packages. I’ve started compiling a mini-package called hdxr that wraps these pipelines up neatly. I’ve added a new function today hdx_resource_csv that means to download datasets from HDX all you need to do is the following:
+library(hdxr)hdx_connect()datasets &amp;lt;- hdx_package_search(term = &amp;quot;141121-sierra-leone-health-facilities&amp;quot;) %&amp;gt;%hdx_resource_list() %&amp;gt;%hdx_resource_csv()I’ve described most of these functions in previous posts, but basically:</description>
+    </item>
     
     <item>
       <title>Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa</title>
@@ -27,8 +37,8 @@ Here’s a quick example of what it allows you to do. The visualisations in this
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>
-      <description>Update: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from gitub: hdxr If you’ve ideas on how I should do it better, please let me know on github/twitter.
-I’ve been trying to make it easier for me to get information from the Humanitarian Data Exchange. The folk who run the centre have been trying to make it easier to access too, they’ve released a python api, and they use CKAN so you can download JSON information about each ‘package’ (basically the subject of the data) and each ‘resource’ (the data itself).</description>
+      <description>Update: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from github: hdxr. The code below is the OLD version, the up to date versions are on github. If you’ve ideas on how I should do it better, please let me know on github/twitter.
+I’ve been trying to make it easier for me to get information from the Humanitarian Data Exchange.</description>
     </item>
     
     <item>
