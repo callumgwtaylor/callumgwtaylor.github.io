@@ -1,5 +1,5 @@
 ---
-title: 'Downloading datasets from HDX in an easier pipeline and a tidy format hdxr and hdx_resource_csv'
+title: Downloading datasets from HDX in an easier pipeline and a tidy format hdxr and hdx_resource_csv
 author: ~
 date: '2017-06-11'
 slug: downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr-and-hdx-resource-csv
