@@ -1,5 +1,5 @@
 ---
-title: Downloading data from HDX easily in a tidy format, hdxr and hdx_resource_csv
+title: Downloading data from HDX easily in a tidy format - hdxr and hdx_resource_csv
 author: ~
 date: '2017-06-11'
 slug: downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr
@@ -14,10 +14,11 @@ Tags: R, hdxr, tidyverse, ckanr
 
 <div id="an-easier-pipeline-for-humanitarian-data-exchange-with-a-tidy-format" class="section level2">
 <h2>An easier pipeline for Humanitarian Data Exchange, with a tidy format</h2>
-<p>I’ve been trying to make it easier to extract data from HDX in R, using tidyverse packages. I’ve started compiling a mini-package called hdxr that wraps these pipelines up neatly. I’ve added a new function today <code>hdx_resource_csv</code> that means to download datasets from HDX all you need to do is the following:</p>
+<p>I’ve been trying to make it easier to extract data from HDX in R, using tidyverse and ropensci packages. I’ve started compiling a mini-package called <a href="https://github.com/callumgwtaylor/hdxr">hdxr</a> that wraps these pipelines up neatly.</p>
+<p>I’ve added a new function today <code>hdx_resource_csv</code> that means to download datasets from HDX all you need to do is the following:</p>
 <pre><code>library(hdxr)
 hdx_connect()
-datasets &lt;- hdx_package_search(term = &quot;141121-sierra-leone-health-facilities&quot;) %&gt;%
+datasets &lt;- hdx_package_search(term = &quot;data title&quot;) %&gt;%
   hdx_resource_list() %&gt;%
   hdx_resource_csv()</code></pre>
 <p>I’ve described most of these functions in previous <a href="https://callumgwtaylor.github.io/blog/2017/06/04/mini-package-hdxr/">posts</a>, but basically:</p>
@@ -28,9 +29,9 @@ datasets &lt;- hdx_package_search(term = &quot;141121-sierra-leone-health-facili
 <h3>hdx_resource_csv</h3>
 <p>The new function <code>hdx_resource_csv</code> will take the results of <code>hdx_resource_list</code>, and return a new dataframe. This will have three columns:</p>
 <ul>
-<li><strong>identifier</strong> this has a title merged from the package and dataset titles</li>
-<li><strong>location</strong> this is the url where the csv was downloaded from</li>
-<li><strong>csv</strong> this is a nested dataframe downloaded from the location url</li>
+<li><strong>identifier</strong> a title merged from the package and dataset titles</li>
+<li><strong>location</strong> the url where the csv was downloaded from</li>
+<li><strong>csv</strong> a nested dataframe downloaded from the location url</li>
 </ul>
 <p>hdx_resource_csv provides a nested dataframe column to allow a sensible output when you download multiple csvs all with different columns in one go.</p>
 <p>When you want to extract a particular csv to work with, you can use <code>dplyr::filter()</code> and <code>tidyr::unnest()</code> to get at it. You could just unnest without filtering, but when every csv has different column titles, the output is a bit messy.</p>

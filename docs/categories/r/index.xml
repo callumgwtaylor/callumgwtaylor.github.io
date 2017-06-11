@@ -12,13 +12,14 @@
     
     
     <item>
-      <title>Downloading data from HDX easily in a tidy format, hdxr and hdx_resource_csv</title>
+      <title>Downloading data from HDX easily in a tidy format - hdxr and hdx_resource_csv</title>
       <link>/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</link>
       <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</guid>
-      <description>An easier pipeline for Humanitarian Data Exchange, with a tidy formatI’ve been trying to make it easier to extract data from HDX in R, using tidyverse packages. I’ve started compiling a mini-package called hdxr that wraps these pipelines up neatly. I’ve added a new function today hdx_resource_csv that means to download datasets from HDX all you need to do is the following:
-library(hdxr)hdx_connect()datasets &amp;lt;- hdx_package_search(term = &amp;quot;141121-sierra-leone-health-facilities&amp;quot;) %&amp;gt;%hdx_resource_list() %&amp;gt;%hdx_resource_csv()I’ve described most of these functions in previous posts, but basically:</description>
+      <description>An easier pipeline for Humanitarian Data Exchange, with a tidy formatI’ve been trying to make it easier to extract data from HDX in R, using tidyverse and ropensci packages. I’ve started compiling a mini-package called hdxr that wraps these pipelines up neatly.
+I’ve added a new function today hdx_resource_csv that means to download datasets from HDX all you need to do is the following:
+library(hdxr)hdx_connect()datasets &amp;lt;- hdx_package_search(term = &amp;quot;data title&amp;quot;) %&amp;gt;%hdx_resource_list() %&amp;gt;%hdx_resource_csv()I’ve described most of these functions in previous posts, but basically:</description>
     </item>
     
   </channel>
