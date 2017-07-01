@@ -109,7 +109,7 @@ acled_map
 
 ## gganimate plot of fatalities from political violence, seperated monthly
 
-![animate_acled](../../docs/post/2017-06-05-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_month.gif)
+![animate_acled]("../../../../post/2017-06-05-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_month.gif")
 
 
 ```{r acled_monthly, echo=FALSE, message=FALSE, warning=FALSE}
