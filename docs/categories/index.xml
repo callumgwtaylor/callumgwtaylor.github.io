@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Callum Taylor</title>
+    <title>Categories on Callum Taylor</title>
     <link>/categories/</link>
-    <description>Recent content on Callum Taylor</description>
+    <description>Recent content in Categories on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate>
@@ -12,17 +12,39 @@
     
     
     <item>
-      <title>Getting data from Humanitarian Data Exchange in a reproducible R pipeline</title>
-      <link>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
+      <title></title>
+      <link>/categories/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>
-      <description>Update: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from github: hdxr. The code below is the OLD version, the up to date versions are on github. If you’ve ideas on how I should do it better, please let me know on github/twitter.
-I’ve been trying to make it easier for me to get information from the Humanitarian Data Exchange.</description>
+      <guid>/categories/</guid>
+      <description></description>
     </item>
     
-  </channel>
-</rss>tion>
+    <item>
+      <title>Development</title>
+      <link>/categories/development/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>/categories/golang/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/categories/r/</link>
+      <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/r/</guid>
+      <description></description>
     </item>
     
     <item>
