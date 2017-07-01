@@ -109,7 +109,7 @@ acled_map
 
 ## gganimate plot of fatalities from political violence, seperated monthly
 
-![animate_acled](../../../../post/2017-06-05-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_month.gif)
+![animate_acled](/post/2017-06-05-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_month.gif)
 
 
 ```{r acled_monthly, echo=FALSE, message=FALSE, warning=FALSE}
@@ -122,5 +122,5 @@ ggplot() +
   labs(title = "All violence resulting in fatalities in Africa in 2017, recorded by ACLED. Month:",
        caption = "Dataset available at: https://data.humdata.org/dataset/acled-conflict-data-for-africa-realtime-2017")
 
-gganimate(acled_month, "../../docs/post/2017-06-05-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_month.gif", ani.width=1000, ani.height=1000)
+gganimate(acled_month, "../../static/post/2017-06-05-using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa_files/figure-html/acled_month.gif", ani.width=1000, ani.height=1000)
 ```
