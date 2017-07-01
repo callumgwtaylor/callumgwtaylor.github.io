@@ -109,7 +109,7 @@ acled_map
 
 ## gganimate plot of fatalities from political violence, seperated monthly
 
-![animate_acled](/blog/master/docs/data/2017_06_04_acled_plots/acled_month.gif)
+![animate_acled](/blog/master/content/data/2017_06_04_acled_plots/acled_month.gif)
 
 
 ```{r acled_monthly, echo=FALSE, message=FALSE, warning=FALSE}
