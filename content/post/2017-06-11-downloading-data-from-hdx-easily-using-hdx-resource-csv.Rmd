@@ -56,7 +56,7 @@ datasets <- hdx_package_search(term = "141121-sierra-leone-health-facilities") %
 ```
 
 The above would give us a dataframe that looks like:
-![](https://raw.githubusercontent.com/callumgwtaylor/blog/master/content/data/2017_06_11_pipelines/example_output.png?token=AKjYFXSVM3_lBhDeWmg3bNygg9C2gPqJks5ZRqgUwA%3D%3D)
+![](/post/2017_06_11_pipelines/example_output.png)
 
 you can then select what you want with filter and unnest it:
 
@@ -66,7 +66,7 @@ sierra_leone_healthsites_sbtf_sle_health <- datasets %>%
   unnest()
 ```
 
-![](https://raw.githubusercontent.com/callumgwtaylor/blog/master/content/data/2017_06_11_pipelines/example_dataframe.png?token=AKjYFWJnUiBkJelzKrCGj40n_t_ZJFAKks5ZRqg9wA%3D%3D)
+![](/post/2017_06_11_pipelines/example_dataframe.png)
 
 #### Any use? Wrong way of doing things?
 
