@@ -84,7 +84,7 @@ joined_data <- cases_data %>%
 
 At the time of writing this, the WHO has released information about 218798 cases of Cholera in Yemen, with 1400 deaths.
 
-This information has been collated by the Humanitarian Data Exchange (HDX), and put [online](https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update). I made a new function for [hdxr](https://callumgwtaylor.github.io/hdxr) the other day to make it easier to use maps from HDX, and wanted to learn more about what's happening in Yemen.
+This information has been collated by the Humanitarian Data Exchange (HDX), and put [online](https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update). I made a new function for [hdxr](https://callumgwtaylor.github.io/hdxr/) the other day to make it easier to use maps from HDX, and wanted to learn more about what's happening in Yemen.
 
 All the information below has been taken from HDX and read into R using hdxr
 
