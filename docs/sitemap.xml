@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/2017/07/03/cholera-in-yemen/</loc>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</loc>
     <lastmod>2017-06-11T00:00:00+00:00</lastmod>
   </url>
@@ -49,13 +54,19 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-06-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
     <lastmod>2017-06-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cholera/</loc>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -79,7 +90,7 @@
   
   <url>
     <loc>/tags/gganimate/</loc>
-    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -92,6 +103,12 @@
   <url>
     <loc>/tags/hdx/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hdxr/</loc>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -109,7 +126,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2017-06-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -121,13 +138,13 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2017-06-11T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -163,13 +180,19 @@
   
   <url>
     <loc>/tags/sf/</loc>
-    <lastmod>2017-06-05T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/yemen/</loc>
+    <lastmod>2017-07-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

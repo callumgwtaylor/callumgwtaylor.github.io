@@ -140,7 +140,7 @@ hdx_connect()
 # We can list all packages available for us
 
 hdx_list(5000)</code></pre>
-<pre><code>## # A tibble: 4,640 x 1
+<pre><code>## # A tibble: 4,905 x 1
 ##                                                                          value
 ##                                                                          &lt;chr&gt;
 ##  1                                       141121-sierra-leone-health-facilities
@@ -153,7 +153,7 @@ hdx_list(5000)</code></pre>
 ##  8                                        2014-2015-food-security-ipc-analysis
 ##  9                         2014-nutrition-smart-survey-results-and-2015-trends
 ## 10                                 2015-humanitarian-needs-overview-indicators
-## # ... with 4,630 more rows</code></pre>
+## # ... with 4,895 more rows</code></pre>
 <pre class="r"><code># We then search for the package we want, and use dplyr to filter it to the exact package
 
 hum_data_packages &lt;- hdx_package_search(&quot;ACLED Conflict Data for Africa&quot;) %&gt;%
@@ -165,11 +165,11 @@ hum_data_resources &lt;- hdx_resource_list(hum_data_packages) %&gt;%
   filter(format == &quot;XLSX&quot;)</code></pre>
 <pre class="r"><code>url &lt;- hum_data_resources$hdx_rel_url
 GET(url, write_disk(&quot;dataset.xlsx&quot;, overwrite=TRUE))</code></pre>
-<pre><code>## Response [http://www.acleddata.com/wp-content/uploads/2017/06/ACLED-All-Africa-File_20170101-to-20170603.xlsx]
-##   Date: 2017-06-11 16:25
+<pre><code>## Response [http://www.acleddata.com/wp-content/uploads/2017/06/ACLED-All-Africa-File_20170101-to-20170617.xlsx]
+##   Date: 2017-07-03 12:21
 ##   Status: 200
 ##   Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
-##   Size: 1.73 MB
+##   Size: 1.86 MB
 ## &lt;ON DISK&gt;  C:\Users\callu\Dropbox\blog\content\post\dataset.xlsx</code></pre>
 <pre class="r"><code>ACLED_CONFLICT_DATA &lt;- read_excel(&quot;dataset.xlsx&quot;, col_names = TRUE)
 rm(url)</code></pre>
