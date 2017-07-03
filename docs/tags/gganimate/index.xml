@@ -19,7 +19,7 @@
       <guid>/2017/07/03/cholera-in-yemen/</guid>
       <description>Cholera in YemenAt the time of writing this, the WHO has released information about 218798 cases of Cholera in Yemen, with 1400 deaths.
 This information has been collated by the Humanitarian Data Exchange (HDX), and put online. I made a new function for hdxr the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen.
-All the information below has been taken from HDX and read into R using hdxr</description>
+All the information below has been taken from HDX and read into R using hdxr.</description>
     </item>
     
     <item>

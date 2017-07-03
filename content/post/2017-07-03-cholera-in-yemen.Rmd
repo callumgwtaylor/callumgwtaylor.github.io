@@ -86,7 +86,7 @@ At the time of writing this, the WHO has released information about 218798 cases
 
 This information has been collated by the Humanitarian Data Exchange (HDX), and put [online](https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update). I made a new function for [hdxr](https://callumgwtaylor.github.io/hdxr/) the other day to make it easier to use maps from HDX, and wanted to learn more about what's happening in Yemen.
 
-All the information below has been taken from HDX and read into R using hdxr
+All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this [rmarkdown document](https://github.com/callumgwtaylor/blog/blob/master/content/post/2017-07-03-cholera-in-yemen.Rmd)
 
 I don't know why but mortality rates seems to vary a lot between administrative districts. Amanat Al-Asimah, containing Sana'a, Yemen's largest city, has had the most cholera cases in the country (33349) but only 53 deaths. Whereas Hajjah, has had almost 9000 fewer cases (24566), but over four times the amount of deaths (223).
 
