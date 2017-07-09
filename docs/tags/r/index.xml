@@ -18,7 +18,8 @@
       
       <guid>/2017/07/09/cholera-in-yemen-is-getting-worse/</guid>
       <description>Publicly available data about the cholera crisis in Yemen is provided through bulletins from the World Health Organistion. Released online, each one gives the most recent running total of cholera cases and deaths in each part of the country. You can get a copy yourself here
-The map below shows the most recent numbers. Currently it’s the more densely populated areas of the West coast that are most badly affected, particularly Sana’a and Al Hudaydah.</description>
+The code to recreate this map and the plot is available here
+The map below shows the most recent numbers.</description>
     </item>
     
     <item>

@@ -112,6 +112,8 @@ today <- joined_data %>%
 
 Publicly available data about the cholera crisis in Yemen is provided through bulletins from the World Health Organistion. Released online, each one gives the most recent running total of cholera cases and deaths in each part of the country. You can get a copy yourself [here](https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update)
 
+The code to recreate this map and the plot is available [here](https://github.com/callumgwtaylor/blog/blob/master/content/post/2017-07-09-cholera-in-yemen-is-getting-worse.Rmd)
+
 The map below shows the most recent numbers. Currently it's the more densely populated areas of the West coast that are most badly affected, particularly Sana'a and Al Hudaydah.
 
 However what this map doesn't show easily, is that things seem to be getting worse.
@@ -130,7 +132,7 @@ pal <- colorNumeric(
   domain = today$cases)
 
 leaflet(today) %>%
-  setView(lng = 47.985076, lat = 16.248058, zoom = 7) %>%
+  setView(lng = 47.985076, lat = 16.248058, zoom = 6) %>%
   addPolygons(stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.5,
     color = ~pal(cases), label = ~htmlEscape(str_c(admin1Name, ". Cases: ", cases))) %>%
   addLegend(pal = pal,values = ~cases, opacity = 0.5) %>%
