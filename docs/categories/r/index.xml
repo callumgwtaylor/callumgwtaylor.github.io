@@ -6,10 +6,20 @@
     <description>Recent content in R on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cholera in Yemen is getting worse</title>
+      <link>/2017/07/09/cholera-in-yemen-is-getting-worse/</link>
+      <pubDate>Sun, 09 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/09/cholera-in-yemen-is-getting-worse/</guid>
+      <description>Publicly available data about the cholera crisis in Yemen is provided through bulletins from the World Health Organistion. Released online, each one gives the most recent running total of cholera cases and deaths in each part of the country. You can get a copy yourself here
+The map below shows the most recent numbers. Currently it’s the more densely populated areas of the West coast that are most badly affected, particularly Sana’a and Al Hudaydah.</description>
+    </item>
     
     <item>
       <title>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</title>

@@ -1,0 +1,156 @@
+---
+title: Cholera in Yemen is getting worse
+author: ~
+date: '2017-07-09'
+slug: cholera-in-yemen-is-getting-worse
+categories: []
+tags: []
+Categories: R
+Description: ''
+Tags: R
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(hdxr)
+library(ggplot2)
+library(gganimate)
+library(wesanderson)
+library(leaflet)
+library(htmltools)
+library(stringr)
+library(lubridate)
+```
+
+```{r yemen, message=FALSE, warning=FALSE, include=FALSE}
+hdx_connect()
+yemen_map <- hdx_dataset_search("yemen-admin-boundaries", exact = TRUE) %>%
+  hdx_resource_list() %>%
+  filter(name.resources == "Admin-1.zip") %>%
+  hdx_resource_shapefile() 
+
+yemen_data <- hdx_dataset_search("yemen-cholera-outbreak-daily-epidemiology-update", exact = TRUE) %>%
+  hdx_resource_list() %>%
+  hdx_resource_csv() %>%
+  unnest() %>%
+  rename(admin1Name = `COD Gov English`)
+
+yemen_data$Date <- as.Date(yemen_data$Date)
+
+yemen_map_filtered <- yemen_map %>%
+  select(admin1Name, geometry)
+
+yemen_map_filtered <- yemen_map %>%
+  select(admin1Name, geometry)
+
+deaths_data <- yemen_data %>%
+  select(Date, admin1Name, Deaths) %>%
+  filter(!is.na(admin1Name)) %>% 
+  distinct() %>%
+  spread(key = Date, value = Deaths)
+
+deaths_data <- left_join(yemen_map_filtered, deaths_data, by = "admin1Name")
+
+deaths_data_names <- names(deaths_data)
+dates <- stringr::str_subset(deaths_data_names, "^2017")
+
+deaths_data <- deaths_data %>%
+  gather("date", "deaths", dates)
+deaths_data$date <- as.Date(deaths_data$date)
+
+cases_data <- yemen_data %>%
+  select(Date, admin1Name, Cases) %>%
+  filter(!is.na(admin1Name)) %>%
+  distinct() %>%
+  spread(key = Date, value = Cases)
+
+cases_data <- left_join(yemen_map_filtered, cases_data, by = "admin1Name")
+
+cases_data <- cases_data %>%
+  gather("date", "cases", dates)
+cases_data$date <- as.Date(cases_data$date)
+
+joined_data <- cases_data %>%
+  select(admin1Name, date, cases) %>%
+  left_join(deaths_data, by = c("admin1Name", "date"))
+
+dates <- joined_data %>%
+  ungroup() %>%
+  select(date) %>%
+  arrange(desc(date)) %>%
+  unique() %>%
+  mutate(previous_date = lead(date, n = 1)) %>%
+  mutate(date_differences = as.numeric(date - previous_date))
+
+calculated_measures <- joined_data %>%
+  ungroup() %>%
+  select(admin1Name, date, previous_deaths = deaths, previous_cases = cases)
+
+new_data <- left_join(joined_data, dates, by = "date")
+
+joined_data <- left_join(new_data, calculated_measures, by = c("admin1Name", "previous_date" = "date")) %>%
+  mutate(new_deaths_per_day = (deaths - previous_deaths)/date_differences,
+         new_cases_per_day = (cases- previous_cases)/date_differences)
+
+#rm(yemen_map, yemen_map_filtered, yemen_data, deaths_data, cases_data, dates, deaths_data_names)
+```
+
+```{r leaflet_shape, message=FALSE, warning=FALSE, include=FALSE}
+dates <- joined_data %>%
+  ungroup() %>%
+  select(date) %>%
+  arrange(desc(date))
+
+most_recent <- dates[[1,1]]
+
+today <- joined_data %>%
+  filter(date == most_recent) %>%
+  sf::st_as_sf()
+
+```
+
+Publicly available data about the cholera crisis in Yemen is provided through bulletins from the World Health Organistion. Released online, each one gives the most recent running total of cholera cases and deaths in each part of the country. You can get a copy yourself [here](https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update)
+
+The map below shows the most recent numbers. Currently it's the more densely populated areas of the West coast that are most badly affected, particularly Sana'a and Al Hudaydah.
+
+However what this map doesn't show easily, is that things seem to be getting worse.
+
+If we take each bulletin's total number of cases and subtract the previous cases (and adjust for the fact we sometimes have to wait a few days for an update), it seems that the number of new cases of cholera is increasing in several areas. Al Hudaydah had around 250 cases per day at the start of the epidemic, but at the most recent bulletin we saw a 1000 new cases.
+
+In fact in the most recent bulletin: Al Hudaydah, Hajjah, and Al Dhale'e have all averaged over 1000 new cases per day since the bulletin before.
+
+
+```{r leaflet_cases, echo=FALSE, message=FALSE, warning=FALSE}
+wes <- wes_palette("Zissou", type = "continuous") %>%
+  as.vector()
+
+pal <- colorNumeric(
+  palette = wes,
+  domain = today$cases)
+
+leaflet(today) %>%
+  setView(lng = 47.985076, lat = 16.248058, zoom = 7) %>%
+  addPolygons(stroke = FALSE, smoothFactor = 0.2, fillOpacity = 0.5,
+    color = ~pal(cases), label = ~htmlEscape(str_c(admin1Name, ". Cases: ", cases))) %>%
+  addLegend(pal = pal,values = ~cases, opacity = 0.5) %>%
+  addTiles()
+```
+
+```{r facet_new_cases, echo=FALSE, message=FALSE, warning=FALSE, fig.height=8, fig.width=8}
+ggplot(joined_data, aes(x = date, y = new_cases_per_day)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(colour = wes[5]) +
+  facet_wrap(~admin1Name) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle=45, hjust = 1, vjust = 1)) +
+  scale_y_continuous(limits = c(0, 1500)) +
+  labs(x = "Date",
+       y = "Cases",
+      title = "Cholera in Yemen is worsening",
+      subtitle = "Calculated number of new cases of cholera per day in each area of Yemen",
+      caption = "data from https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update")
+```
+
+
+
