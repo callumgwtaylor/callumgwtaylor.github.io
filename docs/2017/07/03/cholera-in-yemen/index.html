@@ -71,13 +71,11 @@
 			<div class="post">
 			 	<h1>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</h1>
 			  <span class="post-date">Mon, Jul 3, 2017</span>
-			      <div id="cholera-in-yemen" class="section level2">
-<h2>Cholera in Yemen</h2>
-<p>At the time of writing this, the WHO has released information about 218798 cases of Cholera in Yemen, with 1400 deaths.</p>
+			      <div id="cholera-in-yemen-updated-12-july-2017" class="section level2">
+<h2>Cholera in Yemen : UPDATED 12-JULY-2017</h2>
+<p>At the time of writing this, the WHO has released information about 320199 cases of Cholera in Yemen, with 1742 deaths.</p>
 <p>This information has been collated by the Humanitarian Data Exchange (HDX), and put <a href="https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update">online</a>. I made a new function for <a href="https://callumgwtaylor.github.io/hdxr/">hdxr</a> the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen.</p>
 <p>All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this <a href="https://github.com/callumgwtaylor/blog/blob/master/content/post/2017-07-03-cholera-in-yemen.Rmd">rmarkdown document</a></p>
-<p>I don’t know why but mortality rates seems to vary a lot between administrative districts. Amanat Al-Asimah, containing Sana’a, Yemen’s largest city, has had the most cholera cases in the country (33349) but only 53 deaths. Whereas Hajjah, has had almost 9000 fewer cases (24566), but over four times the amount of deaths (223).</p>
-<p>I’ve included a table showing the differing mortality rates. I don’t know enough about Cholera or Yemen to explain it, but I’d be suprised if that variation is all real. I’d assume that some regions (Raymah) are more likely to report deaths than cases, giving an increased mortality, whereas a major city like Sana’a might be more likely to report every case, bringing it’s overall mortality down.</p>
 </div>
 <div id="cholera-deaths" class="section level2">
 <h2>Cholera Deaths</h2>
@@ -94,6 +92,8 @@
 
 </div>
 <p><img src="../../../../post/2017-07-03-cholera-in-yemen_files/figure-html/cases_line-1.png" width="768" /></p>
+<p><img src="../../../../post/2017-07-03-cholera-in-yemen_files/figure-html/facet_new_cases-1.png" width="768" /></p>
+<p><img src="../../../../post/2017-07-03-cholera-in-yemen_files/figure-html/country_wide-1.png" width="672" /><img src="../../../../post/2017-07-03-cholera-in-yemen_files/figure-html/country_wide-2.png" width="672" /><img src="../../../../post/2017-07-03-cholera-in-yemen_files/figure-html/country_wide-3.png" width="672" /><img src="../../../../post/2017-07-03-cholera-in-yemen_files/figure-html/country_wide-4.png" width="672" /></p>
 <div id="cholera-deaths-table" class="section level3">
 <h3>Cholera Deaths Table</h3>
 <table>
@@ -107,33 +107,33 @@
 <tbody>
 <tr class="odd">
 <td align="left">Hajjah</td>
-<td align="right">223</td>
-<td align="right">24566</td>
+<td align="right">338</td>
+<td align="right">35310</td>
 </tr>
 <tr class="even">
 <td align="left">Ibb</td>
-<td align="right">193</td>
-<td align="right">16489</td>
+<td align="right">227</td>
+<td align="right">25433</td>
 </tr>
 <tr class="odd">
 <td align="left">Al Hudaydah</td>
-<td align="right">160</td>
-<td align="right">26893</td>
+<td align="right">199</td>
+<td align="right">38942</td>
 </tr>
 <tr class="even">
-<td align="left">Amran</td>
-<td align="right">137</td>
-<td align="right">23402</td>
+<td align="left">Taizz</td>
+<td align="right">150</td>
+<td align="right">22903</td>
 </tr>
 <tr class="odd">
-<td align="left">Taizz</td>
-<td align="right">121</td>
-<td align="right">16388</td>
+<td align="left">Amran</td>
+<td align="right">149</td>
+<td align="right">32625</td>
 </tr>
 <tr class="even">
-<td align="left">Sana’a</td>
-<td align="right">97</td>
-<td align="right">18145</td>
+<td align="left">Dhamar</td>
+<td align="right">114</td>
+<td align="right">20848</td>
 </tr>
 </tbody>
 </table>
@@ -151,168 +151,33 @@
 <tbody>
 <tr class="odd">
 <td align="left">Amanat Al Asimah</td>
-<td align="right">53</td>
-<td align="right">33349</td>
+<td align="right">56</td>
+<td align="right">42765</td>
 </tr>
 <tr class="even">
 <td align="left">Al Hudaydah</td>
-<td align="right">160</td>
-<td align="right">26893</td>
+<td align="right">199</td>
+<td align="right">38942</td>
 </tr>
 <tr class="odd">
 <td align="left">Hajjah</td>
-<td align="right">223</td>
-<td align="right">24566</td>
+<td align="right">338</td>
+<td align="right">35310</td>
 </tr>
 <tr class="even">
 <td align="left">Amran</td>
-<td align="right">137</td>
-<td align="right">23402</td>
+<td align="right">149</td>
+<td align="right">32625</td>
 </tr>
 <tr class="odd">
-<td align="left">Sana’a</td>
-<td align="right">97</td>
-<td align="right">18145</td>
-</tr>
-<tr class="even">
 <td align="left">Ibb</td>
-<td align="right">193</td>
-<td align="right">16489</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="cholera-mortality-percentage-table" class="section level3">
-<h3>Cholera Mortality Percentage Table</h3>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Administrative District</th>
-<th align="right">Deaths</th>
-<th align="right">Cases</th>
-<th align="right">Percentage Mortality</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Raymah</td>
-<td align="right">64</td>
-<td align="right">3935</td>
-<td align="right">1.6264295</td>
+<td align="right">227</td>
+<td align="right">25433</td>
 </tr>
 <tr class="even">
-<td align="left">Ibb</td>
-<td align="right">193</td>
-<td align="right">16489</td>
-<td align="right">1.1704773</td>
-</tr>
-<tr class="odd">
-<td align="left">Hajjah</td>
-<td align="right">223</td>
-<td align="right">24566</td>
-<td align="right">0.9077587</td>
-</tr>
-<tr class="even">
-<td align="left">Al Mahwit</td>
-<td align="right">93</td>
-<td align="right">10892</td>
-<td align="right">0.8538377</td>
-</tr>
-<tr class="odd">
-<td align="left">Dhamar</td>
-<td align="right">94</td>
-<td align="right">11742</td>
-<td align="right">0.8005451</td>
-</tr>
-<tr class="even">
-<td align="left">Taizz</td>
-<td align="right">121</td>
-<td align="right">16388</td>
-<td align="right">0.7383451</td>
-</tr>
-<tr class="odd">
-<td align="left">Al Jawf</td>
-<td align="right">10</td>
-<td align="right">1388</td>
-<td align="right">0.7204611</td>
-</tr>
-<tr class="even">
-<td align="left">Aden</td>
-<td align="right">44</td>
-<td align="right">6469</td>
-<td align="right">0.6801670</td>
-</tr>
-<tr class="odd">
-<td align="left">Al Hudaydah</td>
-<td align="right">160</td>
-<td align="right">26893</td>
-<td align="right">0.5949504</td>
-</tr>
-<tr class="even">
-<td align="left">Amran</td>
-<td align="right">137</td>
-<td align="right">23402</td>
-<td align="right">0.5854200</td>
-</tr>
-<tr class="odd">
-<td align="left">Marib</td>
-<td align="right">4</td>
-<td align="right">728</td>
-<td align="right">0.5494505</td>
-</tr>
-<tr class="even">
-<td align="left">Abyan</td>
-<td align="right">22</td>
-<td align="right">4086</td>
-<td align="right">0.5384239</td>
-</tr>
-<tr class="odd">
 <td align="left">Sana’a</td>
-<td align="right">97</td>
-<td align="right">18145</td>
-<td align="right">0.5345825</td>
-</tr>
-<tr class="even">
-<td align="left">Al Dhale’e</td>
-<td align="right">51</td>
-<td align="right">9746</td>
-<td align="right">0.5232916</td>
-</tr>
-<tr class="odd">
-<td align="left">Lahj</td>
-<td align="right">13</td>
-<td align="right">2779</td>
-<td align="right">0.4677942</td>
-</tr>
-<tr class="even">
-<td align="left">Al Maharah</td>
-<td align="right">1</td>
-<td align="right">214</td>
-<td align="right">0.4672897</td>
-</tr>
-<tr class="odd">
-<td align="left">Sa’ada</td>
-<td align="right">1</td>
-<td align="right">297</td>
-<td align="right">0.3367003</td>
-</tr>
-<tr class="even">
-<td align="left">Al Bayda</td>
-<td align="right">19</td>
-<td align="right">7210</td>
-<td align="right">0.2635229</td>
-</tr>
-<tr class="odd">
-<td align="left">Amanat Al Asimah</td>
-<td align="right">53</td>
-<td align="right">33349</td>
-<td align="right">0.1589253</td>
-</tr>
-<tr class="even">
-<td align="left">Shabwah</td>
-<td align="right">0</td>
-<td align="right">80</td>
-<td align="right">0.0000000</td>
+<td align="right">111</td>
+<td align="right">24360</td>
 </tr>
 </tbody>
 </table>
