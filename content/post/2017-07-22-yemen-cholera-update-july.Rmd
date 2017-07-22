@@ -166,11 +166,11 @@ countrywide <- joined_data %>%
 
 ## Cholera in Yemen : UPDATED 22-JULY-2017
 
-**At the time of writing, the WHO has released information about `r sum(today$cases, na.rm = TRUE)` cases of Cholera in Yemen, with `r sum(today$deaths, na.rm = TRUE)` deaths. This post uses data released on `r most_recent`. This information has been collated by the Humanitarian Data Exchange (HDX), and put [online](https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update). All the information below has been taken from HDX and read into R using [hdxr](https://callumgwtaylor.github.io/hdxr/). The code to run it all is in this [rmarkdown document](https://github.com/callumgwtaylor/blog/blob/master/content/post/2017-07-03-cholera-in-yemen.Rmd)**
+**At the time of writing, the WHO has released information about `r sum(today$cases, na.rm = TRUE)` cases of cholera in Yemen, with `r sum(today$deaths, na.rm = TRUE)` deaths. This post uses data released on `r most_recent`. This information has been collated by the Humanitarian Data Exchange (HDX), and put [online](https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update). All the information below has been taken from HDX and read into R using [hdxr](https://callumgwtaylor.github.io/hdxr/). The code to run it all is in this [rmarkdown document](https://github.com/callumgwtaylor/blog/blob/master/content/post/2017-07-03-cholera-in-yemen.Rmd)**
 
 Over the last fortnight the rate of new cases of cholera has slowed slightly, but we're still seeing more than 5000 new cases daily. Whilst numbers of new diagnoses of cholera are dropping in regions like Sana'a, more badly affected governates like Al Hudaydah show no signs of slowing down. The mortality rate is staying relatively static, with one in every 200 cases of cholera resulting in death.
 
-According to [Oxfam](http://www.reuters.com/article/us-yemen-cholera-who-idUSKBN1A61GY), the total number of cases of cholera in Yemen could double with the rainy season to over 600,000. Keeping our current mortality rates, thats 3000 deaths from a preventable illness.
+According to [Oxfam](http://www.reuters.com/article/us-yemen-cholera-who-idUSKBN1A61GY), the total number of cases of cholera in Yemen could double with the rainy season to over 600,000. Keeping our current mortality rates, that's 3000 deaths from a preventable illness.
 
 ## Cholera Cases
 
