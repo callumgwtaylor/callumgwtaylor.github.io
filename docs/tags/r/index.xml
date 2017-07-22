@@ -6,10 +6,19 @@
     <description>Recent content in R on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jul 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>In Yemen, cases of cholera and deaths continue to rise</title>
+      <link>/2017/07/22/yemen-cholera-update-july/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/22/yemen-cholera-update-july/</guid>
+      <description>Cholera in Yemen : UPDATED 22-JULY-2017At the time of writing, the WHO has released information about 368207 cases of Cholera in Yemen, with 1828 deaths. This post uses data released on 2017-07-19. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
+    </item>
     
     <item>
       <title>Cholera in Yemen is getting worse</title>
