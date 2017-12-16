@@ -6,10 +6,19 @@
     <description>Recent content on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The State of Cholera in Yemen in December</title>
+      <link>/2017/12/16/yemen-cholera-update-december/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/16/yemen-cholera-update-december/</guid>
+      <description>Cholera in Yemen : UPDATED 16-DECEMBER-2017At the time of writing, the WHO has released information about 959810 cases of cholera in Yemen, with 2219 deaths. This post uses data released on 2017-11-26. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
+    </item>
     
     <item>
       <title>The State of Cholera in Yemen in November</title>
