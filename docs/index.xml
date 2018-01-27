@@ -6,10 +6,20 @@
     <description>Recent content on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>New Package In Development: Snakes</title>
+      <link>/2018/01/27/new-package-in-development-snakes/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/01/27/new-package-in-development-snakes/</guid>
+      <description>tl:dr snakes is a package containing data on individual snake species, from the World Health Organization Snake Database. You can get an early version from “devtools::install_github(”callumgwtaylor/snakes“)”
+Recently for an assignment for my masters I was looking at the global burden of snakebite. Keen to get some pretty diagrams in to distract the reviewers from my terrible writing, I went online to find a resource we could analyse in R. This had worked well enough for previous essays, especially with the existence of The Humanitarian Data Exchange, plus a mini package I’d written for my own purposes to import their data easily.</description>
+    </item>
     
     <item>
       <title>The State of Cholera in Yemen in December</title>
