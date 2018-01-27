@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on Callum Taylor</title>
-    <link>https://callumgwtaylor.github.io/blog</link>
+    <link>https://callumgwtaylor.github.io/blog/</link>
     <description>Recent content in Golang on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
