@@ -16,7 +16,7 @@
       <link>https://callumgwtaylor.github.io/blog/2018/01/27/new-package-in-development-snakes/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/01/27/new-package-in-development-snakes/</guid>
+      <guid>https://callumgwtaylor.github.io/blog/2018/01/27/new-package-in-development-snakes/</guid>
       <description>tl:dr snakes is a package containing data on individual snake species, from the World Health Organization Snake Database. You can get an early version from “devtools::install_github(”callumgwtaylor/snakes“)”
 Recently for an assignment for my masters I was looking at the global burden of snakebite. Keen to get some pretty diagrams in to distract the reviewers from my terrible writing, I went online to find a resource we could analyse in R. This had worked well enough for previous essays, especially with the existence of The Humanitarian Data Exchange, plus a mini package I’d written for my own purposes to import their data easily.</description>
     </item>
@@ -26,7 +26,7 @@ Recently for an assignment for my masters I was looking at the global burden of 
       <link>https://callumgwtaylor.github.io/blog/2017/12/16/yemen-cholera-update-december/</link>
       <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/12/16/yemen-cholera-update-december/</guid>
+      <guid>https://callumgwtaylor.github.io/blog/2017/12/16/yemen-cholera-update-december/</guid>
       <description>Cholera in Yemen : UPDATED 16-DECEMBER-2017At the time of writing, the WHO has released information about 959810 cases of cholera in Yemen, with 2219 deaths. This post uses data released on 2017-11-26. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
     </item>
     
@@ -35,7 +35,7 @@ Recently for an assignment for my masters I was looking at the global burden of 
       <link>https://callumgwtaylor.github.io/blog/2017/11/16/yemen-cholera-update-november/</link>
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/11/16/yemen-cholera-update-november/</guid>
+      <guid>https://callumgwtaylor.github.io/blog/2017/11/16/yemen-cholera-update-november/</guid>
       <description>Cholera in Yemen : UPDATED 16-NOVEMBER-2017At the time of writing, the WHO has released information about 913741 cases of cholera in Yemen, with 2196 deaths. This post uses data released on 2017-11-08. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
     </item>
     
@@ -44,7 +44,7 @@ Recently for an assignment for my masters I was looking at the global burden of 
       <link>https://callumgwtaylor.github.io/blog/2017/07/22/yemen-cholera-update-july/</link>
       <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/07/22/yemen-cholera-update-july/</guid>
+      <guid>https://callumgwtaylor.github.io/blog/2017/07/22/yemen-cholera-update-july/</guid>
       <description>Cholera in Yemen : UPDATED 22-JULY-2017At the time of writing, the WHO has released information about 368207 cases of cholera in Yemen, with 1828 deaths. This post uses data released on 2017-07-19. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
     </item>
     
@@ -53,7 +53,7 @@ Recently for an assignment for my masters I was looking at the global burden of 
       <link>https://callumgwtaylor.github.io/blog/2017/07/09/cholera-in-yemen-is-getting-worse/</link>
       <pubDate>Sun, 09 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/07/09/cholera-in-yemen-is-getting-worse/</guid>
+      <guid>https://callumgwtaylor.github.io/blog/2017/07/09/cholera-in-yemen-is-getting-worse/</guid>
       <description>Publicly available data about the cholera crisis in Yemen is provided through bulletins from the World Health Organistion. Released online, each one gives the most recent running total of cholera cases and deaths in each part of the country. You can get a copy yourself here
 The code to recreate this map and the plot is available here
 The map below shows the most recent numbers.</description>
@@ -64,7 +64,7 @@ The map below shows the most recent numbers.</description>
       <link>https://callumgwtaylor.github.io/blog/2017/07/03/cholera-in-yemen/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/07/03/cholera-in-yemen/</guid>
+      <guid>https://callumgwtaylor.github.io/blog/2017/07/03/cholera-in-yemen/</guid>
       <description>Cholera in Yemen : UPDATED 12-JULY-2017At the time of writing this, the WHO has released information about 320199 cases of Cholera in Yemen, with 1742 deaths.
 This information has been collated by the Humanitarian Data Exchange (HDX), and put online. I made a new function for hdxr the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen.</description>
     </item>
@@ -74,7 +74,7 @@ This information has been collated by the Humanitarian Data Exchange (HDX), and 
       <link>https://callumgwtaylor.github.io/blog/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</link>
       <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</guid>
+      <guid>https://callumgwtaylor.github.io/blog/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</guid>
       <description>An easier pipeline for Humanitarian Data Exchange, with a tidy formatI’ve been trying to make it easier to extract data from HDX in R, using tidyverse and ropensci packages. I’ve started compiling a mini-package called hdxr that wraps these pipelines up neatly.
 I’ve added a new function today hdx_resource_csv that means to download datasets from HDX all you need to do is the following:
 library(hdxr)hdx_connect()datasets &amp;lt;- hdx_package_search(term = &amp;quot;data title&amp;quot;) %&amp;gt;%hdx_resource_list() %&amp;gt;%hdx_resource_csv()I’ve described most of these functions in previous posts, but basically:</description>
