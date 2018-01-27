@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Callum Taylor</title>
-    <link>/</link>
+    <link>https://callumgwtaylor.github.io/blog</link>
     <description>Recent content on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>New Package In Development: Snakes</title>
-      <link>/2018/01/27/new-package-in-development-snakes/</link>
+      <link>https://callumgwtaylor.github.io/blog/2018/01/27/new-package-in-development-snakes/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/01/27/new-package-in-development-snakes/</guid>
@@ -23,7 +23,7 @@ Recently for an assignment for my masters I was looking at the global burden of 
     
     <item>
       <title>The State of Cholera in Yemen in December</title>
-      <link>/2017/12/16/yemen-cholera-update-december/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/12/16/yemen-cholera-update-december/</link>
       <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/12/16/yemen-cholera-update-december/</guid>
@@ -32,7 +32,7 @@ Recently for an assignment for my masters I was looking at the global burden of 
     
     <item>
       <title>The State of Cholera in Yemen in November</title>
-      <link>/2017/11/16/yemen-cholera-update-november/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/11/16/yemen-cholera-update-november/</link>
       <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/11/16/yemen-cholera-update-november/</guid>
@@ -41,7 +41,7 @@ Recently for an assignment for my masters I was looking at the global burden of 
     
     <item>
       <title>In Yemen, cases of cholera and deaths continue to rise</title>
-      <link>/2017/07/22/yemen-cholera-update-july/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/07/22/yemen-cholera-update-july/</link>
       <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/07/22/yemen-cholera-update-july/</guid>
@@ -50,7 +50,7 @@ Recently for an assignment for my masters I was looking at the global burden of 
     
     <item>
       <title>Cholera in Yemen is getting worse</title>
-      <link>/2017/07/09/cholera-in-yemen-is-getting-worse/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/07/09/cholera-in-yemen-is-getting-worse/</link>
       <pubDate>Sun, 09 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/07/09/cholera-in-yemen-is-getting-worse/</guid>
@@ -61,7 +61,7 @@ The map below shows the most recent numbers.</description>
     
     <item>
       <title>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</title>
-      <link>/2017/07/03/cholera-in-yemen/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/07/03/cholera-in-yemen/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/07/03/cholera-in-yemen/</guid>
@@ -71,7 +71,7 @@ This information has been collated by the Humanitarian Data Exchange (HDX), and 
     
     <item>
       <title>Downloading data from HDX easily in a tidy format - hdxr and hdx_resource_csv</title>
-      <link>/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</link>
       <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</guid>
@@ -82,7 +82,7 @@ library(hdxr)hdx_connect()datasets &amp;lt;- hdx_package_search(term = &amp;qu
     
     <item>
       <title>Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa</title>
-      <link>/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
@@ -92,7 +92,7 @@ Here’s a quick example of what it allows you to do. The visualisations in this
     
     <item>
       <title>Getting data from Humanitarian Data Exchange in a reproducible R pipeline</title>
-      <link>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>
@@ -102,7 +102,7 @@ I’ve been trying to make it easier for me to get information from the Humanita
     
     <item>
       <title>Mini Package: hdxr</title>
-      <link>/2017/06/04/mini-package-hdxr/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/06/04/mini-package-hdxr/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/04/mini-package-hdxr/</guid>
@@ -113,7 +113,7 @@ So here we are: hdxr</description>
     
     <item>
       <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>
-      <link>/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>
@@ -123,7 +123,7 @@ Recently I’ve gone back to the same files, to see if what I’ve learnt has ma
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>https://callumgwtaylor.github.io/blog/about/</link>
       <pubDate>Sun, 28 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
@@ -133,7 +133,7 @@ This is a personal site built using the blogdown package. The theme is from @spf
     
     <item>
       <title>Archive</title>
-      <link>/archive/</link>
+      <link>https://callumgwtaylor.github.io/blog/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/archive/</guid>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Hdxr. Hdx Package on Callum Taylor</title>
-    <link>/categories/r-hdxr.-hdx-package/</link>
+    <link>https://callumgwtaylor.github.io/blog</link>
     <description>Recent content in R Hdxr. Hdx Package on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/r-hdxr.-hdx-package/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/categories/r-hdxr.-hdx-package/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mini Package: hdxr</title>
-      <link>/2017/06/04/mini-package-hdxr/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/06/04/mini-package-hdxr/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/04/mini-package-hdxr/</guid>

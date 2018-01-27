@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Json on Callum Taylor</title>
-    <link>/tags/json/</link>
+    <link>https://callumgwtaylor.github.io/blog</link>
     <description>Recent content in Json on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/json/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/json/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting data from Humanitarian Data Exchange in a reproducible R pipeline</title>
-      <link>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>

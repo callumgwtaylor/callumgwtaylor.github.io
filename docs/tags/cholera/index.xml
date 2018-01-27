@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cholera on Callum Taylor</title>
-    <link>/tags/cholera/</link>
+    <link>https://callumgwtaylor.github.io/blog</link>
     <description>Recent content in Cholera on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Jul 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/cholera/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/cholera/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</title>
-      <link>/2017/07/03/cholera-in-yemen/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/07/03/cholera-in-yemen/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/07/03/cholera-in-yemen/</guid>

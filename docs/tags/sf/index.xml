@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sf on Callum Taylor</title>
-    <link>/tags/sf/</link>
+    <link>https://callumgwtaylor.github.io/blog</link>
     <description>Recent content in Sf on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Jul 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/sf/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/sf/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</title>
-      <link>/2017/07/03/cholera-in-yemen/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/07/03/cholera-in-yemen/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/07/03/cholera-in-yemen/</guid>
@@ -23,7 +23,7 @@ This information has been collated by the Humanitarian Data Exchange (HDX), and 
     
     <item>
       <title>Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa</title>
-      <link>/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
@@ -33,7 +33,7 @@ Here’s a quick example of what it allows you to do. The visualisations in this
     
     <item>
       <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>
-      <link>/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
+      <link>https://callumgwtaylor.github.io/blog/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>

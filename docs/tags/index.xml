@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Callum Taylor</title>
-    <link>/tags/</link>
+    <link>https://callumgwtaylor.github.io/blog</link>
     <description>Recent content in Tags on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 05 Jun 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Acled</title>
-      <link>/tags/acled/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/acled/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/acled/</guid>
@@ -22,7 +22,7 @@
     
     <item>
       <title>Cholera</title>
-      <link>/tags/cholera/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/cholera/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/cholera/</guid>
@@ -31,7 +31,7 @@
     
     <item>
       <title>Deprivation</title>
-      <link>/tags/deprivation/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/deprivation/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/deprivation/</guid>
@@ -40,7 +40,7 @@
     
     <item>
       <title>Geofacet</title>
-      <link>/tags/geofacet/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/geofacet/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/geofacet/</guid>
@@ -49,7 +49,7 @@
     
     <item>
       <title>Gganimate</title>
-      <link>/tags/gganimate/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/gganimate/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/gganimate/</guid>
@@ -58,7 +58,7 @@
     
     <item>
       <title>Hdx</title>
-      <link>/tags/hdx/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/hdx/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/hdx/</guid>
@@ -67,7 +67,7 @@
     
     <item>
       <title>Hdxr</title>
-      <link>/tags/hdxr/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/hdxr/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/hdxr/</guid>
@@ -76,7 +76,7 @@
     
     <item>
       <title>Humanitarian Data Exchange</title>
-      <link>/tags/humanitarian-data-exchange/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/humanitarian-data-exchange/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/humanitarian-data-exchange/</guid>
@@ -85,7 +85,7 @@
     
     <item>
       <title>Json</title>
-      <link>/tags/json/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/json/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/json/</guid>
@@ -94,7 +94,7 @@
     
     <item>
       <title>Public Health</title>
-      <link>/tags/public-health/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/public-health/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/public-health/</guid>
@@ -103,7 +103,7 @@
     
     <item>
       <title>R</title>
-      <link>/tags/r/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/r/</link>
       <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
@@ -112,7 +112,7 @@
     
     <item>
       <title>R Hdxr Tidyverse Ckanr</title>
-      <link>/tags/r-hdxr-tidyverse-ckanr/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/r-hdxr-tidyverse-ckanr/</link>
       <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/r-hdxr-tidyverse-ckanr/</guid>
@@ -121,7 +121,7 @@
     
     <item>
       <title>R. Hdxr Hdx Package</title>
-      <link>/tags/r.-hdxr-hdx-package/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/r.-hdxr-hdx-package/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/r.-hdxr-hdx-package/</guid>
@@ -130,7 +130,7 @@
     
     <item>
       <title>Reproducible</title>
-      <link>/tags/reproducible/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/reproducible/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/reproducible/</guid>
@@ -139,7 +139,7 @@
     
     <item>
       <title>Scotland</title>
-      <link>/tags/scotland/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/scotland/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/scotland/</guid>
@@ -148,7 +148,7 @@
     
     <item>
       <title>Sf</title>
-      <link>/tags/sf/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/sf/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/sf/</guid>
@@ -157,7 +157,7 @@
     
     <item>
       <title>Yemen</title>
-      <link>/tags/yemen/</link>
+      <link>https://callumgwtaylor.github.io/blog/tags/yemen/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/tags/yemen/</guid>
