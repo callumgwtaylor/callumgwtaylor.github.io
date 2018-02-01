@@ -6,10 +6,20 @@
     <description>Recent content in R on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using RSelenium and Docker To Webscrape In R - Using The WHO Snake Database</title>
+      <link>https://callumgwtaylor.github.io/blog/2018/02/01/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://callumgwtaylor.github.io/blog/2018/02/01/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/</guid>
+      <description>Webscraping In R with RSelenium - Extracting Information from the WHO Snake Antivenom Database Making Excuses Looking back at this post it seems a bit like how to draw an owl.
+But! The complicated parts towards the end and are very much the specifics of to download the WHO database. What I wanted to share were the basics of RSelenium installation and use. Hopefully this helps you if you were thinking of doing something similar.</description>
+    </item>
     
     <item>
       <title>New Package In Development: Snakes</title>
