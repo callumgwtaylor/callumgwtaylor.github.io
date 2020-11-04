@@ -5,7 +5,7 @@ title = "Callum Taylor"
 theme = "hyde"
 googleAnalytics = "UA-100075448-1"
 disqusShortname = ""
-ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmarkdown$", "\\.knit\\.md$", "\\.utf8\\.md$","\\.Rmd$", "_cache$"]
 publishDir = "docs"
 
 [permalinks]
