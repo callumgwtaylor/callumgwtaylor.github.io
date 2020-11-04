@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hdxr on Callum Taylor</title>
-    <link>https://callumgwtaylor.github.io/blog/ </link>
-    <description>Recent content in Hdxr on Callum Taylor</description>
+    <title>hdxr on Callum Taylor</title>
+    <link>https://callumgwtaylor.github.io/blog/tags/hdxr/</link>
+    <description>Recent content in hdxr on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jul 2017 00:00:00 +0000</lastBuildDate>
-    
-        <atom:link href="/tags/hdxr/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 03 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/blog/tags/hdxr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</title>
       <link>https://callumgwtaylor.github.io/blog/2017/07/03/cholera-in-yemen/</link>

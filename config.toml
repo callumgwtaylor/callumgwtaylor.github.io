@@ -25,7 +25,7 @@ publishDir = "docs"
     url = "https://twitter.com/callumgwt"
 
 [params]
-   description = "A personal blog - mostly using R in Medicine"
+   description = ""
     themeColor = "theme-base-0d"
 
     # options for highlight.js (version, additional languages, and theme)

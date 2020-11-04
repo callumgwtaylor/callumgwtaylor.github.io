@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Callum Taylor</title>
-    <link>https://callumgwtaylor.github.io/blog/ </link>
+    <link>https://callumgwtaylor.github.io/blog/categories/r/</link>
     <description>Recent content in R on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
-    
-        <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/blog/categories/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using RSelenium and Docker To Webscrape In R - Using The WHO Snake Database</title>
       <link>https://callumgwtaylor.github.io/blog/2018/02/01/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/</link>

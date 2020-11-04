@@ -1,40 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Callum Taylor</title>
-    <link>https://callumgwtaylor.github.io/blog/ </link>
+    <link>https://callumgwtaylor.github.io/blog/categories/</link>
     <description>Recent content in Categories on Callum Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate>
-    
-        <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://callumgwtaylor.github.io/blog/categories/</link>
-      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      <title>COVID</title>
+      <link>https://callumgwtaylor.github.io/blog/categories/covid/</link>
+      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://callumgwtaylor.github.io/blog/categories/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Development</title>
-      <link>https://callumgwtaylor.github.io/blog/categories/development/</link>
-      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://callumgwtaylor.github.io/blog/categories/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://callumgwtaylor.github.io/blog/categories/golang/</link>
-      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://callumgwtaylor.github.io/blog/categories/golang/</guid>
+      <guid>https://callumgwtaylor.github.io/blog/categories/covid/</guid>
       <description></description>
     </item>
     
@@ -48,7 +26,25 @@
     </item>
     
     <item>
-      <title>R Hdxr. Hdx Package</title>
+      <title>Development</title>
+      <link>https://callumgwtaylor.github.io/blog/categories/development/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://callumgwtaylor.github.io/blog/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GoLang</title>
+      <link>https://callumgwtaylor.github.io/blog/categories/golang/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://callumgwtaylor.github.io/blog/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R, hdxr. hdx, package</title>
       <link>https://callumgwtaylor.github.io/blog/categories/r-hdxr.-hdx-package/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       

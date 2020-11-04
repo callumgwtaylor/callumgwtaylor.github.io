@@ -13,7 +13,7 @@
 </script>
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.20.7" />
+  <meta name="generator" content="Hugo 0.78.0" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -23,9 +23,9 @@
   
 
   
-  <link rel="stylesheet" href="../../../../css/poole.css">
-  <link rel="stylesheet" href="../../../../css/syntax.css">
-  <link rel="stylesheet" href="../../../../css/hyde.css">
+  <link rel="stylesheet" href="https://callumgwtaylor.github.io/blog/css/poole.css">
+  <link rel="stylesheet" href="https://callumgwtaylor.github.io/blog/css/syntax.css">
+  <link rel="stylesheet" href="https://callumgwtaylor.github.io/blog/css/hyde.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   
@@ -43,18 +43,18 @@
 		<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="../../../../"><h1>Callum Taylor</h1></a>
+      <a href="https://callumgwtaylor.github.io/blog/"><h1>Callum Taylor</h1></a>
       <p class="lead">
-       A personal blog - mostly using R in Medicine 
+      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
       </p>
     </div>
 
     <ul class="sidebar-nav">
       <li><a href="../../../../">Home</a> </li>
       
-        <li><a href="../../../../archive/"> Archive </a></li>
+        <li><a href="../../../../blog/archive/"> Archive </a></li>
       
-        <li><a href="../../../../about/"> Callum Taylor </a></li>
+        <li><a href="../../../../blog/about/"> Callum Taylor </a></li>
       
         <li><a href="https://github.com/callumgwtaylor"> GitHub </a></li>
       
@@ -62,7 +62,7 @@
       
     </ul>
 
-    <p>&copy; 2018. All rights reserved. </p>
+    <p>&copy; 2020. All rights reserved. </p>
   </div>
 </div>
 
@@ -71,7 +71,10 @@
 			<div class="post">
 			 	<h1>Getting data from Humanitarian Data Exchange in a reproducible R pipeline</h1>
 			  <span class="post-date">Sun, Jun 4, 2017</span>
-			      <p><strong>Update</strong>: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from github: <a href="https://github.com/callumgwtaylor/hdxr">hdxr</a>. The code below is the OLD version, the up to date versions are on github. If you’ve ideas on how I should do it better, please let me know on github/twitter.</p>
+			      
+
+
+<p><strong>Update</strong>: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from github: <a href="https://github.com/callumgwtaylor/hdxr">hdxr</a>. The code below is the OLD version, the up to date versions are on github. If you’ve ideas on how I should do it better, please let me know on github/twitter.</p>
 <p>I’ve been trying to make it easier for me to get information from the <a href="https://data.humdata.org/">Humanitarian Data Exchange</a>. The folk who run the centre have been trying to make it easier to access too, they’ve released a <a href="https://github.com/OCHA-DAP/hdx-python-api">python api</a>, and they use CKAN so you can download JSON information about each ‘package’ (basically the subject of the data) and each ‘resource’ (the data itself). The problem for me is I don’t know python, I’m not comfortable with CKAN, and struggle with JSON also.</p>
 <p>All I wanted to be able to do was search for a package, and download a specific resourse, in a reproducible and roughly tidy-ish fashion</p>
 <p>I’ve made a couple of functions to make it easier to do so. I’ve been using <code>ckanr</code> and <code>jsonlite</code></p>
