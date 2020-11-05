@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GoLang on CallumGWTaylor</title>
-    <link>https://callumgwtaylor.github.io/blog/categories/golang/</link>
+    <link>https://callumgwtaylor.github.io/categories/golang/</link>
     <description>Recent content in GoLang on CallumGWTaylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/blog/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa</title>
-      <link>https://callumgwtaylor.github.io/blog/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
+      <link>https://callumgwtaylor.github.io/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://callumgwtaylor.github.io/blog/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
+      <guid>https://callumgwtaylor.github.io/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
       <description>Mapping fatalities from violence in Africa in 2017In my previous post I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.
 Here’s a quick example of what it allows you to do. The visualisations in this aren’t pretty, it’s mainly meant as an example of what you can easily do. I’m really enjoying using sf to plot maps in ggplot2, thanks to Matt Strimas-Mackey showing how to get that working.</description>
     </item>

@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sf on CallumGWTaylor</title>
-    <link>https://callumgwtaylor.github.io/blog/tags/sf/</link>
+    <link>https://callumgwtaylor.github.io/tags/sf/</link>
     <description>Recent content in sf on CallumGWTaylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/blog/tags/sf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/tags/sf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</title>
-      <link>https://callumgwtaylor.github.io/blog/post/cholera-in-yemen/</link>
+      <link>https://callumgwtaylor.github.io/post/cholera-in-yemen/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://callumgwtaylor.github.io/blog/post/cholera-in-yemen/</guid>
+      <guid>https://callumgwtaylor.github.io/post/cholera-in-yemen/</guid>
       <description>Cholera in Yemen : UPDATED 12-JULY-2017At the time of writing this, the WHO has released information about 320199 cases of Cholera in Yemen, with 1742 deaths.
 This information has been collated by the Humanitarian Data Exchange (HDX), and put online. I made a new function for hdxr the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen.</description>
     </item>
     
     <item>
       <title>Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa</title>
-      <link>https://callumgwtaylor.github.io/blog/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
+      <link>https://callumgwtaylor.github.io/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://callumgwtaylor.github.io/blog/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
+      <guid>https://callumgwtaylor.github.io/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
       <description>Mapping fatalities from violence in Africa in 2017In my previous post I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.
 Here’s a quick example of what it allows you to do. The visualisations in this aren’t pretty, it’s mainly meant as an example of what you can easily do. I’m really enjoying using sf to plot maps in ggplot2, thanks to Matt Strimas-Mackey showing how to get that working.</description>
     </item>
     
     <item>
       <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>
-      <link>https://callumgwtaylor.github.io/blog/post/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
+      <link>https://callumgwtaylor.github.io/post/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://callumgwtaylor.github.io/blog/post/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>
+      <guid>https://callumgwtaylor.github.io/post/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>
       <description>Using the geofacet package to plot deprivation in Scotland by Health BoardsA few months ago, when I was first starting to learn to use R, I tried looking at the data from the Scottish Index of Multiple Deprivation. The Scottish Government split Scotland up into 6976 equally populated “data zones” (not quite neighbourhoods, but pretty close), and ranked them from most deprived (1), to least deprived (6976)
 Recently I’ve gone back to the same files, to see if what I’ve learnt has made it easier to look at deprivation in Scotland.</description>
     </item>
