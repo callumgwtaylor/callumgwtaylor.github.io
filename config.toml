@@ -1,4 +1,4 @@
-baseURL = "https://callumgwtaylor.github.io/blog/"
+baseURL = "https://callumgwtaylor.github.io/"
 languageCode = "en-us"
 title = "CallumGWTaylor"
 theme = "cactus"

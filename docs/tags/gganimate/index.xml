@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gganimate on CallumGWTaylor</title>
-    <link>http://example.org/tags/gganimate/</link>
+    <link>https://callumgwtaylor.github.io/tags/gganimate/</link>
     <description>Recent content in gganimate on CallumGWTaylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/gganimate/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/tags/gganimate/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</title>
-      <link>http://example.org/post/cholera-in-yemen/</link>
+      <link>https://callumgwtaylor.github.io/post/cholera-in-yemen/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/cholera-in-yemen/</guid>
+      <guid>https://callumgwtaylor.github.io/post/cholera-in-yemen/</guid>
       <description>Cholera in Yemen : UPDATED 12-JULY-2017At the time of writing this, the WHO has released information about 320199 cases of Cholera in Yemen, with 1742 deaths.
 This information has been collated by the Humanitarian Data Exchange (HDX), and put online. I made a new function for hdxr the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen.</description>
     </item>
     
     <item>
       <title>Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa</title>
-      <link>http://example.org/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
+      <link>https://callumgwtaylor.github.io/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
+      <guid>https://callumgwtaylor.github.io/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
       <description>Mapping fatalities from violence in Africa in 2017In my previous post I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.
 Here’s a quick example of what it allows you to do. The visualisations in this aren’t pretty, it’s mainly meant as an example of what you can easily do. I’m really enjoying using sf to plot maps in ggplot2, thanks to Matt Strimas-Mackey showing how to get that working.</description>
     </item>
