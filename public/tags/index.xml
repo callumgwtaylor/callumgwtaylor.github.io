@@ -1,40 +1,162 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on A Hugo website</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on A Hugo website</description>
+    <title>Tags on My New Hugo Site</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Plot</title>
-      <link>/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>R</title>
+      <link>http://example.org/tags/r/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/plot/</guid>
+      <guid>http://example.org/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>cholera</title>
+      <link>http://example.org/tags/cholera/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r-markdown/</guid>
+      <guid>http://example.org/tags/cholera/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Regression</title>
-      <link>/tags/regression/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>gganimate</title>
+      <link>http://example.org/tags/gganimate/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/regression/</guid>
+      <guid>http://example.org/tags/gganimate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hdxr</title>
+      <link>http://example.org/tags/hdxr/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/hdxr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sf</title>
+      <link>http://example.org/tags/sf/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/sf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yemen</title>
+      <link>http://example.org/tags/yemen/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/yemen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R, hdxr, tidyverse, ckanr</title>
+      <link>http://example.org/tags/r-hdxr-tidyverse-ckanr/</link>
+      <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/r-hdxr-tidyverse-ckanr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ACLED</title>
+      <link>http://example.org/tags/acled/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/acled/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HDX</title>
+      <link>http://example.org/tags/hdx/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/hdx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Humanitarian Data Exchange</title>
+      <link>http://example.org/tags/humanitarian-data-exchange/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/humanitarian-data-exchange/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JSON</title>
+      <link>http://example.org/tags/json/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R. hdxr, hdx, package</title>
+      <link>http://example.org/tags/r.-hdxr-hdx-package/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/r.-hdxr-hdx-package/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducible</title>
+      <link>http://example.org/tags/reproducible/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/reproducible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deprivation</title>
+      <link>http://example.org/tags/deprivation/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/deprivation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>geofacet</title>
+      <link>http://example.org/tags/geofacet/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/geofacet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Public Health</title>
+      <link>http://example.org/tags/public-health/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/public-health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scotland</title>
+      <link>http://example.org/tags/scotland/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/tags/scotland/</guid>
       <description></description>
     </item>
     

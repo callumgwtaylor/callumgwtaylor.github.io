@@ -1,25 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on A Hugo website</title>
-    <link>/categories/r/</link>
-    <description>Recent content in R on A Hugo website</description>
+    <title>R on My New Hugo Site</title>
+    <link>http://example.org/categories/r/</link>
+    <description>Recent content in R on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
-    
-	<atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 27 Jan 2018 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Package In Development: Snakes</title>
+      <link>http://example.org/post/new-package-in-development-snakes/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/new-package-in-development-snakes/</guid>
+      <description>tl:dr snakes is a package containing data on individual snake species, from the World Health Organization Snake Database. You can get an early version from “devtools::install_github(”callumgwtaylor/snakes“)”
+Recently for an assignment for my masters I was looking at the global burden of snakebite. Keen to get some pretty diagrams in to distract the reviewers from my terrible writing, I went online to find a resource we could analyse in R. This had worked well enough for previous essays, especially with the existence of The Humanitarian Data Exchange, plus a mini package I’d written for my own purposes to import their data easily.</description>
+    </item>
     
     <item>
-      <title>Hello R Markdown</title>
-      <link>/2015/07/23/hello-r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>The State of Cholera in Yemen in December</title>
+      <link>http://example.org/post/yemen-cholera-update-december/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/2015/07/23/hello-r-markdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+      <guid>http://example.org/post/yemen-cholera-update-december/</guid>
+      <description>Cholera in Yemen : UPDATED 16-DECEMBER-2017At the time of writing, the WHO has released information about 959810 cases of cholera in Yemen, with 2219 deaths. This post uses data released on 2017-11-26. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
+    </item>
+    
+    <item>
+      <title>The State of Cholera in Yemen in November</title>
+      <link>http://example.org/post/yemen-cholera-update-november/</link>
+      <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/yemen-cholera-update-november/</guid>
+      <description>Cholera in Yemen : UPDATED 16-NOVEMBER-2017At the time of writing, the WHO has released information about 913741 cases of cholera in Yemen, with 2196 deaths. This post uses data released on 2017-11-08. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
+    </item>
+    
+    <item>
+      <title>In Yemen, cases of cholera and deaths continue to rise</title>
+      <link>http://example.org/post/yemen-cholera-update-july/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/yemen-cholera-update-july/</guid>
+      <description>Cholera in Yemen : UPDATED 22-JULY-2017At the time of writing, the WHO has released information about 368207 cases of cholera in Yemen, with 1828 deaths. This post uses data released on 2017-07-19. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
+    </item>
+    
+    <item>
+      <title>Cholera in Yemen is getting worse</title>
+      <link>http://example.org/post/cholera-in-yemen-is-getting-worse/</link>
+      <pubDate>Sun, 09 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/cholera-in-yemen-is-getting-worse/</guid>
+      <description>Publicly available data about the cholera crisis in Yemen is provided through bulletins from the World Health Organistion. Released online, each one gives the most recent running total of cholera cases and deaths in each part of the country. You can get a copy yourself here
+The code to recreate this map and the plot is available here
+The map below shows the most recent numbers.</description>
+    </item>
+    
+    <item>
+      <title>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</title>
+      <link>http://example.org/post/cholera-in-yemen/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/cholera-in-yemen/</guid>
+      <description>Cholera in Yemen : UPDATED 12-JULY-2017At the time of writing this, the WHO has released information about 320199 cases of Cholera in Yemen, with 1742 deaths.
+This information has been collated by the Humanitarian Data Exchange (HDX), and put online. I made a new function for hdxr the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen.</description>
+    </item>
+    
+    <item>
+      <title>Downloading data from HDX easily in a tidy format - hdxr and hdx_resource_csv</title>
+      <link>http://example.org/post/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</link>
+      <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</guid>
+      <description>An easier pipeline for Humanitarian Data Exchange, with a tidy formatI’ve been trying to make it easier to extract data from HDX in R, using tidyverse and ropensci packages. I’ve started compiling a mini-package called hdxr that wraps these pipelines up neatly.
+I’ve added a new function today hdx_resource_csv that means to download datasets from HDX all you need to do is the following:
+library(hdxr)hdx_connect()datasets &amp;lt;- hdx_package_search(term = &amp;quot;data title&amp;quot;) %&amp;gt;%hdx_resource_list() %&amp;gt;%hdx_resource_csv()I’ve described most of these functions in previous posts, but basically:</description>
     </item>
     
   </channel>

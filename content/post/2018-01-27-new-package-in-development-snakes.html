@@ -17,9 +17,9 @@ Tags:
 <p><em>tl:dr snakes is a package containing data on individual snake species, from the World Health Organization Snake Database. You can get an early version from “devtools::install_github(”callumgwtaylor/snakes“)”</em></p>
 <p>Recently for an assignment for my masters I was looking at the global burden of snakebite. Keen to get some pretty diagrams in to distract the reviewers from my terrible writing, I went online to find a resource we could analyse in R. This had worked well enough for previous essays, especially with the existence of <a href="https://data.humdata.org/">The Humanitarian Data Exchange</a>, plus a <a href="http://callumgwtaylor.github.io/hdxr">mini package</a> I’d written for my own purposes to import their data easily.</p>
 <p>However after a brief search, the only online resource I could see was the <a href="http://apps.who.int/bloodproducts/snakeantivenoms/database/">WHO Snake and Antivenoms Database</a>. Most organisations are keen to get you to have a delve into what they have, recently I’ve used data from <a href="http://www.start.umd.edu/gtd/contact/">The Global Terrorism Database</a> and the <a href="http://www.emdat.be/database">International Disasters Database</a>. Both required a bit of registration but ultimately sent you a csv download.</p>
-<p>The WHO Database however, looked like this: <img src="/data/snakes/who-database-landing.png" /> And once you selected a snake, you got this:</p>
+<p>The WHO Database however, looked like this: <img src="/post/2018-01-27-new-package_files/who-database-landing.png" /> And once you selected a snake, you got this:</p>
 <div class="figure">
-<img src="/data/snakes/who-database-naja-naja.png" />
+<img src="/post/2018-01-27-new-package_files/who-database-naja-naja.png" />
 
 </div>
 <p>Now, I really like this set up, there’s a clear layout of information for each snake on their individual page. You get a map and an image, and most importantly, which antivenoms exist. However, if you want to make comparisons between lots of snakes, that becomes a bit more difficult. If you want to explore which snakes don’t have antivenoms, or the global distibution of antivenom producers, or anything else then there’s no straightforward way to do so without a lot of loading individual pages to take information down.</p>
@@ -30,7 +30,7 @@ library(snakes)
 snake_species &lt;- snakes::snake_species_data</code></pre>
 <p><code>snake_species_data</code> will give you:</p>
 <div class="figure">
-<img src="/data/snakes/snake_snake_species_data.png" />
+<img src="/post/2018-01-27-new-package_files/snake_snake_species_data.png" />
 
 </div>
 <ul>
