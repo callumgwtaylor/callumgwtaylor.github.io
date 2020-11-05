@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
+    <title>Posts on CallumGWTaylor</title>
     <link>http://example.org/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <description>Recent content in Posts on CallumGWTaylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
@@ -16,6 +16,16 @@
       <description>Understanding the Telegraph There&amp;rsquo;s an article in the Telegraph titled: &amp;ldquo;Hospital intensive care no busier than normal, leaked documents show - even without Nightingales&amp;rdquo;
 This has been shared on Twitter by some prominent users who were interviewed for the piece
 The headline seems to suggest intensive care is in no different a place to where it would be any other winter. The article gives an impression of a &amp;ldquo;we&amp;rsquo;re making too big a fuss over this, so lockdown isn&amp;rsquo;t necessary&amp;rdquo; perspective.</description>
+    </item>
+    
+    <item>
+      <title>Using RSelenium and Docker To Webscrape In R - Using The WHO Snake Database</title>
+      <link>http://example.org/post/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/</guid>
+      <description>Webscraping In R with RSelenium - Extracting Information from the WHO Snake Antivenom Database Making Excuses Looking back at this post it seems a bit like how to draw an owl.
+But! The complicated parts towards the end and are very much the specifics of to download the WHO database. What I wanted to share were the basics of RSelenium installation and use. Hopefully this helps you if you were thinking of doing something similar.</description>
     </item>
     
     <item>
