@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Cholera in Yemen - mapping deaths from the current epidemic using HDX in R | CallumGWTaylor</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Cholera in Yemen - mapping deaths from the current epidemic using HDX in R" />
+<meta property="og:description" content="Cholera in Yemen : UPDATED 12-JULY-2017At the time of writing this, the WHO has released information about 320199 cases of Cholera in Yemen, with 1742 deaths.
+This information has been collated by the Humanitarian Data Exchange (HDX), and put online. I made a new function for hdxr the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://callumgwtaylor.github.io/post/cholera-in-yemen/" />
+<meta property="article:published_time" content="2017-07-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-07-03T00:00:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cholera in Yemen - mapping deaths from the current epidemic using HDX in R"/>
+<meta name="twitter:description" content="Cholera in Yemen : UPDATED 12-JULY-2017At the time of writing this, the WHO has released information about 320199 cases of Cholera in Yemen, with 1742 deaths.
+This information has been collated by the Humanitarian Data Exchange (HDX), and put online. I made a new function for hdxr the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen."/>
+
+  
+  
+  
+  <link rel="stylesheet" href="https://callumgwtaylor.github.io/css/style-white.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://callumgwtaylor.github.io/images/favicon.ico" />
+
+  
+</head>
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+    <header id="header">
+  <a href="https://callumgwtaylor.github.io/">
+  
+    <div id="logo" style="background-image: url(https://callumgwtaylor.github.io/images/logo.png)"></div>
+  
+  <div id="title">
+    <h1>CallumGWTaylor</h1>
+  </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+      
+    </ul>
+  </div>
+</header>
+  
+
+    
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="content" itemprop="articleBody">
+  
+    
+
+
+<div id="cholera-in-yemen-updated-12-july-2017" class="section level2">
+<h2>Cholera in Yemen : UPDATED 12-JULY-2017</h2>
+<p>At the time of writing this, the WHO has released information about 320199 cases of Cholera in Yemen, with 1742 deaths.</p>
+<p>This information has been collated by the Humanitarian Data Exchange (HDX), and put <a href="https://data.humdata.org/dataset/yemen-cholera-outbreak-daily-epidemiology-update">online</a>. I made a new function for <a href="https://callumgwtaylor.github.io/hdxr/">hdxr</a> the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen.</p>
+<p>All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this <a href="https://github.com/callumgwtaylor/blog/blob/master/content/post/2017-07-03-cholera-in-yemen.Rmd">rmarkdown document</a></p>
+</div>
+<div id="cholera-deaths" class="section level2">
+<h2>Cholera Deaths</h2>
+<div class="figure">
+<img src="/post/2017-07-03-cholera-in-yemen_files/figure-html/yemen_deaths_gif.gif" />
+
+</div>
+<p><img src="/post/2017-07-03-cholera-in-yemen_files/figure-html/deaths_line_graph-1.png" width="768" /></p>
+</div>
+<div id="cholera-cases" class="section level2">
+<h2>Cholera Cases</h2>
+<div class="figure">
+<img src="/post/2017-07-03-cholera-in-yemen_files/figure-html/yemen_cases_gif.gif" />
+
+</div>
+<p><img src="/post/2017-07-03-cholera-in-yemen_files/figure-html/cases_line-1.png" width="768" /></p>
+<p><img src="/post/2017-07-03-cholera-in-yemen_files/figure-html/facet_new_cases-1.png" width="768" /></p>
+<p><img src="/post/2017-07-03-cholera-in-yemen_files/figure-html/country_wide-1.png" width="672" /><img src="/post/2017-07-03-cholera-in-yemen_files/figure-html/country_wide-2.png" width="672" /><img src="/post/2017-07-03-cholera-in-yemen_files/figure-html/country_wide-3.png" width="672" /><img src="/post/2017-07-03-cholera-in-yemen_files/figure-html/country_wide-4.png" width="672" /></p>
+<div id="cholera-deaths-table" class="section level3">
+<h3>Cholera Deaths Table</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Administrative District</th>
+<th align="right">Deaths</th>
+<th align="right">Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Hajjah</td>
+<td align="right">338</td>
+<td align="right">35310</td>
+</tr>
+<tr class="even">
+<td align="left">Ibb</td>
+<td align="right">227</td>
+<td align="right">25433</td>
+</tr>
+<tr class="odd">
+<td align="left">Al Hudaydah</td>
+<td align="right">199</td>
+<td align="right">38942</td>
+</tr>
+<tr class="even">
+<td align="left">Taizz</td>
+<td align="right">150</td>
+<td align="right">22903</td>
+</tr>
+<tr class="odd">
+<td align="left">Amran</td>
+<td align="right">149</td>
+<td align="right">32625</td>
+</tr>
+<tr class="even">
+<td align="left">Dhamar</td>
+<td align="right">114</td>
+<td align="right">20848</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="cholera-cases-table" class="section level3">
+<h3>Cholera Cases Table</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Administrative District</th>
+<th align="right">Deaths</th>
+<th align="right">Cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Amanat Al Asimah</td>
+<td align="right">56</td>
+<td align="right">42765</td>
+</tr>
+<tr class="even">
+<td align="left">Al Hudaydah</td>
+<td align="right">199</td>
+<td align="right">38942</td>
+</tr>
+<tr class="odd">
+<td align="left">Hajjah</td>
+<td align="right">338</td>
+<td align="right">35310</td>
+</tr>
+<tr class="even">
+<td align="left">Amran</td>
+<td align="right">149</td>
+<td align="right">32625</td>
+</tr>
+<tr class="odd">
+<td align="left">Ibb</td>
+<td align="right">227</td>
+<td align="right">25433</td>
+</tr>
+<tr class="even">
+<td align="left">Sana’a</td>
+<td align="right">111</td>
+<td align="right">24360</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+  
+  </div>
+</article>
+
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2020  CallumGWTaylor 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+  
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+</html>

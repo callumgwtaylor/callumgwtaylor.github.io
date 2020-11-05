@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HDX on Callum Taylor</title>
-    <link>https://callumgwtaylor.github.io/blog/tags/hdx/</link>
-    <description>Recent content in HDX on Callum Taylor</description>
+    <title>HDX on CallumGWTaylor</title>
+    <link>https://callumgwtaylor.github.io/tags/hdx/</link>
+    <description>Recent content in HDX on CallumGWTaylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/blog/tags/hdx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/tags/hdx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa</title>
-      <link>https://callumgwtaylor.github.io/blog/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
+      <link>https://callumgwtaylor.github.io/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
       <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://callumgwtaylor.github.io/blog/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
+      <guid>https://callumgwtaylor.github.io/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
       <description>Mapping fatalities from violence in Africa in 2017In my previous post I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.
 Here’s a quick example of what it allows you to do. The visualisations in this aren’t pretty, it’s mainly meant as an example of what you can easily do. I’m really enjoying using sf to plot maps in ggplot2, thanks to Matt Strimas-Mackey showing how to get that working.</description>
     </item>
     
     <item>
       <title>Getting data from Humanitarian Data Exchange in a reproducible R pipeline</title>
-      <link>https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
+      <link>https://callumgwtaylor.github.io/post/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>
+      <guid>https://callumgwtaylor.github.io/post/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>
       <description>Update: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from github: hdxr. The code below is the OLD version, the up to date versions are on github. If you’ve ideas on how I should do it better, please let me know on github/twitter.
 I’ve been trying to make it easier for me to get information from the Humanitarian Data Exchange.</description>
     </item>

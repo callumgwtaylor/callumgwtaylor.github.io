@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Public Health on Callum Taylor</title>
-    <link>https://callumgwtaylor.github.io/blog/tags/public-health/</link>
-    <description>Recent content in Public Health on Callum Taylor</description>
+    <title>Public Health on CallumGWTaylor</title>
+    <link>https://callumgwtaylor.github.io/tags/public-health/</link>
+    <description>Recent content in Public Health on CallumGWTaylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/blog/tags/public-health/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/tags/public-health/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>
-      <link>https://callumgwtaylor.github.io/blog/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
+      <link>https://callumgwtaylor.github.io/post/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
       <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://callumgwtaylor.github.io/blog/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>
+      <guid>https://callumgwtaylor.github.io/post/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>
       <description>Using the geofacet package to plot deprivation in Scotland by Health BoardsA few months ago, when I was first starting to learn to use R, I tried looking at the data from the Scottish Index of Multiple Deprivation. The Scottish Government split Scotland up into 6976 equally populated “data zones” (not quite neighbourhoods, but pretty close), and ranked them from most deprived (1), to least deprived (6976)
 Recently I’ve gone back to the same files, to see if what I’ve learnt has made it easier to look at deprivation in Scotland.</description>
     </item>

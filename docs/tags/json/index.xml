@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JSON on Callum Taylor</title>
-    <link>https://callumgwtaylor.github.io/blog/tags/json/</link>
-    <description>Recent content in JSON on Callum Taylor</description>
+    <title>JSON on CallumGWTaylor</title>
+    <link>https://callumgwtaylor.github.io/tags/json/</link>
+    <description>Recent content in JSON on CallumGWTaylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/blog/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://callumgwtaylor.github.io/tags/json/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting data from Humanitarian Data Exchange in a reproducible R pipeline</title>
-      <link>https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
+      <link>https://callumgwtaylor.github.io/post/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>
+      <guid>https://callumgwtaylor.github.io/post/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>
       <description>Update: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from github: hdxr. The code below is the OLD version, the up to date versions are on github. If you’ve ideas on how I should do it better, please let me know on github/twitter.
 I’ve been trying to make it easier for me to get information from the Humanitarian Data Exchange.</description>
     </item>

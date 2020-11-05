@@ -3,207 +3,198 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/</loc>
+    <loc>https://callumgwtaylor.github.io/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/categories/</loc>
+    <loc>https://callumgwtaylor.github.io/categories/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/categories/covid/</loc>
+    <loc>https://callumgwtaylor.github.io/categories/covid/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/post/</loc>
+    <loc>https://callumgwtaylor.github.io/post/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2020/11/04/trying-to-understand-the-telegraph/</loc>
+    <loc>https://callumgwtaylor.github.io/post/trying-to-understand-the-telegraph/</loc>
     <lastmod>2020-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/r/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/r/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/categories/r/</loc>
+    <loc>https://callumgwtaylor.github.io/categories/r/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2018/02/01/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/</loc>
+    <loc>https://callumgwtaylor.github.io/post/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2018/01/27/new-package-in-development-snakes/</loc>
+    <loc>https://callumgwtaylor.github.io/post/new-package-in-development-snakes/</loc>
     <lastmod>2018-01-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/12/16/yemen-cholera-update-december/</loc>
+    <loc>https://callumgwtaylor.github.io/post/yemen-cholera-update-december/</loc>
     <lastmod>2017-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/11/16/yemen-cholera-update-november/</loc>
+    <loc>https://callumgwtaylor.github.io/post/yemen-cholera-update-november/</loc>
     <lastmod>2017-11-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/07/22/yemen-cholera-update-july/</loc>
+    <loc>https://callumgwtaylor.github.io/post/yemen-cholera-update-july/</loc>
     <lastmod>2017-07-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/07/09/cholera-in-yemen-is-getting-worse/</loc>
+    <loc>https://callumgwtaylor.github.io/post/cholera-in-yemen-is-getting-worse/</loc>
     <lastmod>2017-07-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/cholera/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/cholera/</loc>
     <lastmod>2017-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/07/03/cholera-in-yemen/</loc>
+    <loc>https://callumgwtaylor.github.io/post/cholera-in-yemen/</loc>
     <lastmod>2017-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/gganimate/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/gganimate/</loc>
     <lastmod>2017-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/hdxr/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/hdxr/</loc>
     <lastmod>2017-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/sf/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/sf/</loc>
     <lastmod>2017-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/yemen/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/yemen/</loc>
     <lastmod>2017-07-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/06/11/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</loc>
+    <loc>https://callumgwtaylor.github.io/post/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</loc>
     <lastmod>2017-06-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/r-hdxr-tidyverse-ckanr/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/r-hdxr-tidyverse-ckanr/</loc>
     <lastmod>2017-06-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/acled/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/acled/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/categories/development/</loc>
+    <loc>https://callumgwtaylor.github.io/categories/development/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/categories/golang/</loc>
+    <loc>https://callumgwtaylor.github.io/categories/golang/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/hdx/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/hdx/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/06/05/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</loc>
+    <loc>https://callumgwtaylor.github.io/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</loc>
     <lastmod>2017-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/06/04/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</loc>
+    <loc>https://callumgwtaylor.github.io/post/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</loc>
     <lastmod>2017-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/humanitarian-data-exchange/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/humanitarian-data-exchange/</loc>
     <lastmod>2017-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/json/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/json/</loc>
     <lastmod>2017-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/06/04/mini-package-hdxr/</loc>
+    <loc>https://callumgwtaylor.github.io/post/mini-package-hdxr/</loc>
     <lastmod>2017-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/categories/r-hdxr.-hdx-package/</loc>
+    <loc>https://callumgwtaylor.github.io/categories/r-hdxr.-hdx-package/</loc>
     <lastmod>2017-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/r.-hdxr-hdx-package/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/r.-hdxr-hdx-package/</loc>
     <lastmod>2017-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/reproducible/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/reproducible/</loc>
     <lastmod>2017-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/deprivation/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/deprivation/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/geofacet/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/geofacet/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/2017/05/29/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</loc>
+    <loc>https://callumgwtaylor.github.io/post/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/public-health/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/public-health/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://callumgwtaylor.github.io/blog/tags/scotland/</loc>
+    <loc>https://callumgwtaylor.github.io/tags/scotland/</loc>
     <lastmod>2017-05-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://callumgwtaylor.github.io/blog/about/</loc>
-    <lastmod>2017-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://callumgwtaylor.github.io/blog/archive/</loc>
   </url>
   
 </urlset>
