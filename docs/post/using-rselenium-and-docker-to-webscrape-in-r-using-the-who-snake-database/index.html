@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Using RSelenium and Docker To Webscrape In R - Using The WHO Snake Database | CallumGWTaylor</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Using RSelenium and Docker To Webscrape In R - Using The WHO Snake Database" />
+<meta property="og:description" content="Webscraping In R with RSelenium - Extracting Information from the WHO Snake Antivenom Database Making Excuses Looking back at this post it seems a bit like how to draw an owl.
+But! The complicated parts towards the end and are very much the specifics of to download the WHO database. What I wanted to share were the basics of RSelenium installation and use. Hopefully this helps you if you were thinking of doing something similar." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/post/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/" />
+<meta property="article:published_time" content="2018-02-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-02-01T00:00:00+00:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using RSelenium and Docker To Webscrape In R - Using The WHO Snake Database"/>
+<meta name="twitter:description" content="Webscraping In R with RSelenium - Extracting Information from the WHO Snake Antivenom Database Making Excuses Looking back at this post it seems a bit like how to draw an owl.
+But! The complicated parts towards the end and are very much the specifics of to download the WHO database. What I wanted to share were the basics of RSelenium installation and use. Hopefully this helps you if you were thinking of doing something similar."/>
+
+  
+  
+  
+  <link rel="stylesheet" href="http://example.org/css/style-white.css">
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="http://example.org/images/favicon.ico" />
+
+  
+</head>
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+    <header id="header">
+  <a href="http://example.org/">
+  
+    <div id="logo" style="background-image: url(http://example.org/images/logo.png)"></div>
+  
+  <div id="title">
+    <h1>CallumGWTaylor</h1>
+  </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      </li>
+      
+    </ul>
+  </div>
+</header>
+  
+
+    
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <div class="content" itemprop="articleBody">
+  
+    <h1 id="webscraping-in-r-with-rselenium---extracting-information-from-the-who-snake-antivenom-database">Webscraping In R with RSelenium - Extracting Information from the WHO Snake Antivenom Database</h1>
+<h2 id="making-excuses">Making Excuses</h2>
+<p>Looking back at this post it seems a bit like how to draw an owl.</p>
+<p><img src="./2018-02-01_owl.jpg" alt=""></p>
+<p>But! The complicated parts towards the end and are very much the specifics of to download the WHO database. What I wanted to share were the basics of RSelenium installation and use. Hopefully this helps you if you were thinking of doing something similar.</p>
+<p>So if you&rsquo;re reading this not to get ideas of how to scrape with RSelenium, but instead to use the WHO Snake Database in R, I&rsquo;ve put dataframes for snake species and country data into a package that you can download off github called snakes:</p>
+<p><code>devtools::install_github(&quot;callumgwtaylor/snakes&quot;)</code></p>
+<h2 id="intro">Intro</h2>
+<p>Recently I was looking at the WHO Snake Antivenom Database in R, and had to use rvest and purrr from the tidyverse to get the information from the database in a tidy format. This worked well enough as each snake&rsquo;s information was in it&rsquo;s own page, in the same format each time. I&rsquo;ve put it online <a href="https://callumgwtaylor.github.io/blog/2018/01/27/new-package-in-development-snakes/">here</a></p>
+<p>My next aim was to extract the snake country data, looking at which snake species were present.</p>
+<p>However, there was a problem. The information about a country&rsquo;s snakes would be split across multiple pages, with only ten snakes per page. The links to get through to the remainder of the snake info were little javascript links, and so there wasn&rsquo;t a particular URL I could tell rvest to go to. I couldn&rsquo;t work out if rvest could use any javascript, and it seemed like I needed to try a different approach.</p>
+<p>I needed a package that could load up a page, click through a javascript generated link, then download the information generated on that page. Turns out I needed RSelenium.</p>
+<p>This post documents how I installed and used RSelenium to extract information from the WHO Snake Antivenom Database.  It&rsquo;s definitely not done in a &ldquo;best practices&rdquo; way, but it should allow you to get to a point where you&rsquo;re loading sites in RSelenium, and downloading the information for use in R.</p>
+<h2 id="installation">Installation</h2>
+<p>Basically:</p>
+<ul>
+<li>Selenium is a set of programming tools, a framework, that allows you to automate web browser actions.</li>
+<li>RSelenium is a R package that allows you to use your <strong>seperate</strong> installation of selenium inside R</li>
+<li>Docker is software that allows you to run an environment, where you will run selenium in</li>
+</ul>
+<h3 id="what-to-install">What to install?</h3>
+<p><a href="https://www.docker.com/docker-windows">Docker</a>
+<a href="https://github.com/ropensci/RSelenium">RSelenium</a></p>
+<p>Also, this assumes that you&rsquo;re using RStudio and have some understanding of R. By some understanding I guess I mean, you may have to look up how to do things covered in <a href="http://r4ds.had.co.nz/">R for Data Science</a> but most of the time when you read it, it makes sense.</p>
+<h2 id="getting-it-to-work">Getting it to work</h2>
+<p>So the workflow here is:</p>
+<p>Docker is installed and running. In &ldquo;Docker For Windows&rdquo;, you see an icon in the taskbar that you can hover over, and it should state &ldquo;Docker is running&rdquo;</p>
+<p>In the terminal you start a docker container of the selenium chrome browser. Do this anyway you like. If like me you aren&rsquo;t really used to the terminal, you can get to it through RStudio (Terminal, NOT Console). Running:</p>
+<p><code>docker run -d -p 4445:4444 selenium/standalone-chrome</code></p>
+<p>Will set up the docker container we need.</p>
+<p>If you then run:</p>
+<p><code>docker ps</code></p>
+<p>You should get print out of a table, containing info about the docker container that&rsquo;s just set up.</p>
+<p>Once that&rsquo;s all working, the rest is back in R.</p>
+<p>Load up RSelenium:</p>
+<p><code>library(RSelenium)</code></p>
+<p>And access our selenium browser using the RSelenium package:</p>
+<pre><code>remDr &lt;- RSelenium::remoteDriver(remoteServerAddr = &quot;localhost&quot;,
+                                 port = 4445L,
+                                 browserName = &quot;chrome&quot;)
+remDr$open()
+</code></pre><p>Here what we&rsquo;re doing is creating an object in R that contains the information about the selenium browser we&rsquo;ve created in a docker container. Then we&rsquo;re opening the browser.</p>
+<h2 id="using-rselenium-plus-rvest-to-scrape-the-who-database">Using RSelenium Plus Rvest To Scrape The WHO database</h2>
+<p>So what we&rsquo;re going to do here is use RSelenium to identify and navigate to the correct page, then a mishmash of XML and Rvest to download the information on that individual page. Lastly we&rsquo;ll put everything we&rsquo;ve done into a mix of functions, allowing us to use purrr to automate going through the entire site.</p>
+<h3 id="part-one---open-browser-and-confirm-were-at-the-landing-page">Part One - Open Browser and Confirm We&rsquo;re At The Landing Page</h3>
+<pre><code># So we've loaded docker up already.
+# In the terminal we've run: docker run -d -p 4445:4444 selenium/standalone-chrome
+
+library(RSelenium)
+library(rvest)
+library(xml2)
+library(tidyverse)
+
+remDr &lt;- RSelenium::remoteDriver(remoteServerAddr = &quot;localhost&quot;,
+                      port = 4445L,
+                      browserName = &quot;chrome&quot;)
+remDr$open()
+
+remDr$navigate(&quot;http://apps.who.int/bloodproducts/snakeantivenoms/database/SearchFrm.aspx&quot;) #Entering our URL gets the browser to navigate to the page
+
+remDr$screenshot(display = TRUE) #This will take a screenshot and display it in the RStudio viewer
+</code></pre><p><img src="./2018-01-28_country_10.png" alt=""></p>
+<h3 id="part-two---selecting-the-country-dropdown-menu-and-navigate-to-a-particular-country">Part Two - Selecting The Country Dropdown Menu, and Navigate To A Particular Country</h3>
+<p>Most articles I&rsquo;ve read recommend using <a href="http://selectorgadget.com/">Selector Gadget</a> to identify which part of a site you are trying to interact with. When it works, it works really well, but it didn&rsquo;t want to load on WHO Database.</p>
+<p>Instead, I would right click on the page and use the &ldquo;Inspect&rdquo; option to identify the correct CSS path for RSelenium to use.</p>
+<p><img src="./2018-01-28_country_1.png" alt=""></p>
+<h4 id="creating-a-list-of-countries">Creating A List Of Countries</h4>
+<pre><code class="language-{r" data-lang="{r">snake_countries &lt;- xml2::read_html(remDr$getPageSource()[[1]]) %&gt;%
+  rvest::html_nodes(&quot;#ddlCountry&quot;) %&gt;%
+  rvest::html_children() %&gt;%
+  rvest::html_text() %&gt;%
+  dplyr::data_frame(country_name = .)
+
+snake_countries &lt;- snake_countries %&gt;%
+  dplyr::mutate(list_position = 1:160,
+                x = stringr::str_c(&quot;#ddlCountry &gt; option:nth-child(&quot;,list_position, &quot;)&quot;))
+
+# We chop off our first one as we are never going to navigate to there
+snake_countries &lt;- snake_countries[-1,]
+</code></pre><p>So using the RSelenium <code>getPageSource()</code> function, and selecting the first element <code>remDr$getPageSource()[[1]]</code>, we can use <code>xml2::read_html()</code> to extract the html from the loaded page.</p>
+<p>Using <code>rvest::html_nodes()</code> we&rsquo;ve selected the chunk that we identified earlier with Inspect. Using <code>rvest::html_children()</code> we can extract attributes from the countries chunk, and then using <code>rvest::html_text()</code> we can extract a list of names of countries, which we turn into a column in a data_frame.</p>
+<p>This data_frame is expanded with a column showing how far down the dropdown menu something is, plus a column &ldquo;x&rdquo;. <code>x</code> is a bit more complicated. What we&rsquo;ve done is created the css address for each option in the drop down menu using <code>stringr</code>. This address will be used later when we want to go to a specific country.</p>
+<p>We chop off the first row in our new data_frame as it&rsquo;s some rubbish &ldquo;Select country/territory&rdquo; text that we don&rsquo;t need.</p>
+<p><img src="./2018-01-28_country_11.png" alt=""></p>
+<h4 id="navigating-to-a-specific-country">Navigating To A Specific Country</h4>
+<p>This can be done manually, using the addresses we&rsquo;ve generated:</p>
+<pre><code class="language-{r" data-lang="{r">element&lt;- remDr$findElement(using = 'css selector', &quot;#ddlCountry &gt; option:nth-child(65)&quot;)
+element$clickElement()
+
+# Printing 
+html &lt;- xml2::read_html(remDr$getPageSource()[[1]])
+xml2::write_html(html, &quot;india.html&quot;)
+</code></pre><p>The new things we&rsquo;re doing here is navigating with RSelenium to a specific part of the dropdown menu, using the CSS address we&rsquo;ve got for a particular item (India) and <code>findElement()</code>. Then simply clicking on it!</p>
+<p>We can extract the html from the results and compare what we&rsquo;ve got with what&rsquo;s seen on the official website.</p>
+<p><img src="./2018-01-28_country_3.png" alt="">
+<img src="./2018-01-28_country_4.png" alt=""></p>
+<p>So none of the prettiness, but all the information we wanted!</p>
+<h3 id="part-three---finding-the-seperate-pages-of-snakes">Part Three - Finding The Seperate Pages Of Snakes</h3>
+<p>Using the inspect page in our new tab, it&rsquo;s clear that the name of the table we want is <code>SnakesGridView</code>. Every first table for countries where there are more than ten snakes, will also have twelve rows. That twelfth row (the reason we&rsquo;re talking about <code>tr:nth-child(12)</code> ) will contain the links to the subsequent pages. This was all found through rummaging with Inspect.</p>
+<pre><code class="language-{r" data-lang="{r">element &lt;- remDr$findElement(using = 'css selector', &quot;#SnakesGridView &gt; tbody &gt; tr:nth-child(12) &gt; td &gt; table &gt; tbody &gt; tr &gt; td:nth-child(2)&quot;)
+element$clickElement()
+remDr$screenshot(display = TRUE)
+</code></pre><p><img src="./2018-01-28_country_12.png" alt=""></p>
+<h3 id="part-four---download-one-country">Part Four - Download One Country</h3>
+<p>Success!</p>
+<p>Now there&rsquo;s just a couple of things left to do.</p>
+<p>Download the snake information from the first page of a country profile and store it as a dataframe. Identify whether there is a second/third/fourth page for the profile. Go to these pages and download them.</p>
+<p>Working out if a country have more than ten snakes or not is easy enough, thanks to the way they&rsquo;ve been formatted. If a country has a single page, the html table created by rvest has four columns. If it has multiple pages, the html table has 6, as the links at the bottom mess things up. So we could put the multiple pages stuff statement.</p>
+<p>This chunk below is a bit convoluted. I&rsquo;ve tried to comment on it to make it clearer. The steps basically are:</p>
+<ul>
+<li>Load the country page</li>
+<li>Download the snakes table for that country (if there&rsquo;s only one page, that&rsquo;s all we need to do)</li>
+<li>Work out if there are more pages for the country</li>
+<li>If there additional pages then do the following:</li>
+<li>Work out the directions to get to the additional pages</li>
+<li>Write a function to download from a single additional page</li>
+<li>Use purrr::pmap to use those directions and the function to download all the additional pages</li>
+<li>Put all the additional pages for one country together.</li>
+<li>Reformat it so it looks the same as countries that just have one page</li>
+</ul>
+<pre><code class="language-{r" data-lang="{r"># Then Extract The Snake Page
+country_html &lt;- xml2::read_html(remDr$getPageSource()[[1]])
+
+# We download The Table For the First Page, and if there is only one page that's all we need to do!
+
+country_table &lt;- country_html %&gt;%
+  rvest::html_node(&quot;#SnakesGridView&quot;) %&gt;%
+  rvest::html_table(fill = TRUE)
+
+# Then Determine If There Are More Pages
+more_pages &lt;- length(country_table) &gt; 4
+
+# Create a function to download the additional page's information
+
+snake_country_secondary_download &lt;- function(page_element){
+  
+  element &lt;- remDr$findElement(using = 'css selector', page_element)
+  element$clickElement()
+  
+  country_html &lt;- xml2::read_html(remDr$getPageSource()[[1]])
+  
+  secondary_country &lt;- country_html %&gt;%
+  rvest::html_node(&quot;#SnakesGridView&quot;) %&gt;%
+  rvest::html_table(fill = TRUE)
+  
+  secondary_country
+}
+
+# Put everything about these bigger pages in an if statement
+
+if(more_pages == TRUE){
+  # Then Work Out Exactly How Many More Pages - This is messy, I don't know why it cant go into a single html_node
+  # but it seems to work this way and not the other way.
+
+  country_table_number &lt;- country_html %&gt;%
+  rvest::html_node(&quot;#SnakesGridView&quot;) %&gt;%
+  rvest::html_node(&quot;tbody &gt; tr:nth-child(12)&quot;) %&gt;%
+  rvest::html_node(&quot;td&quot;) %&gt;%
+  rvest::html_node(&quot;table&quot;) %&gt;%
+  rvest::html_node(&quot;tr&quot;) %&gt;%
+  rvest::html_nodes(&quot;td&quot;) %&gt;%
+  length()
+  
+  # Create the links for these secondary pages
+  country_pages &lt;- dplyr::data_frame(
+    page_number = 1:country_table_number,
+    page_element = stringr::str_c(&quot;#SnakesGridView &gt; tbody &gt; tr:nth-child(12) &gt; td &gt; table &gt; tbody &gt; tr &gt; td:nth-child(&quot;, page_number, &quot;)&quot;))
+  
+  country_pages &lt;- country_pages[-1,]
+  country_pages &lt;- country_pages[,2]
+
+    #country_pages left is the data_frame containing the address for the links for all the subsequent pages for each individual country
+    
+    #use purrr::pmap to run through each of the secondary pages with our function we created earlier. Then merge them all together
+  secondary_country &lt;- purrr::pmap(country_pages, download_secondary_country) %&gt;%
+  dplyr::bind_rows()
+  
+  # reformat these secondary pages, so they look the same as our pages where there's less than ten snakes
+
+  country_table &lt;- dplyr::bind_rows(country_table, secondary_country)
+  country_table &lt;- country_table[,1:4] %&gt;%
+    dplyr::filter(is.na(`Link*`))
+}
+</code></pre><h3 id="step-five---final-step---automate-to-download-all-countries">Step Five - Final Step - Automate To Download All Countries</h3>
+<p>This section below is then close to identical to the section above. We&rsquo;ve got it to work for one country. Now we just need to put it into a function, to allow us to work through every country.</p>
+<p>The arguments the function takes are the address of the country, the WHO ID of the country and the name of the country.</p>
+<pre><code>snake_country_download &lt;- function(x, country_name){
+  # Then Go To Our Country
+  remDr$navigate(&quot;http://apps.who.int/bloodproducts/snakeantivenoms/database/SearchFrm.aspx&quot;) # First we load the databas
+  element&lt;- remDr$findElement(using = 'css selector', x)
+  element$clickElement() #We'll need to create a way to insert the country into that child form
+  
+  # Then Extract The Snake Page
+  country_html &lt;- xml2::read_html(remDr$getPageSource()[[1]])
+  
+  country_table &lt;- country_html %&gt;%
+    rvest::html_node(&quot;#SnakesGridView&quot;) %&gt;%
+    rvest::html_table(fill = TRUE)
+  
+  # Then Determine If There Are More Pages
+  more_pages &lt;- length(country_table) &gt; 4
+  
+  if(more_pages == TRUE){
+    # Then Work Out Exactly How Many More Pages
+    country_table_number &lt;- country_html %&gt;%
+      rvest::html_node(&quot;#SnakesGridView&quot;) %&gt;%
+      rvest::html_node(&quot;tbody &gt; tr:nth-child(12)&quot;) %&gt;%
+      rvest::html_node(&quot;td&quot;) %&gt;%
+      rvest::html_node(&quot;table&quot;) %&gt;%
+      rvest::html_node(&quot;tr&quot;) %&gt;%
+      rvest::html_nodes(&quot;td&quot;) %&gt;%
+      length()
+    
+    # Then create a data frame, with new address from us to download these from
+    country_pages &lt;- dplyr::data_frame(
+      page_number = 1:country_table_number,
+      page_element = stringr::str_c(&quot;#SnakesGridView &gt; tbody &gt; tr:nth-child(12) &gt; td &gt; table &gt; tbody &gt; tr &gt; td:nth-child(&quot;, page_number, &quot;)&quot;))
+    
+    country_pages &lt;- country_pages[-1,]
+    country_pages &lt;- country_pages[,2]
+    
+    # Then use a secondary function to download these
+    secondary_country &lt;- purrr::pmap(country_pages, snake_country_secondary_download) %&gt;%
+      dplyr::bind_rows()
+    
+    # Then, for countries that we had to download multiple pages, merge them all together
+    country_table &lt;- dplyr::bind_rows(country_table, secondary_country)
+    country_table &lt;- country_table[,1:4] %&gt;%
+      dplyr::filter(is.na(`Link*`))
+  }
+  
+  country_table &lt;- country_table %&gt;%
+    dplyr::mutate(country_name = country_name)
+  
+  message(country_name)
+  country_table
+}
+</code></pre><p>We lastly use <code>purrr::pmap()</code> one last time to work through the addresses of countries we&rsquo;ve already created, using the download function we just made.</p>
+<pre><code>snake_country_data &lt;- purrr::pmap(snake_countries, snake_country_download) %&gt;%
+  dplyr::bind_rows()
+
+snake_country_data &lt;- snake_country_data %&gt;%
+  dplyr::select(country_name, snake_category = `Cat**`, snake_common_name = `Common name`, snake_species = `Species name`)
+</code></pre><p><img src="./2018-01-28_country_13.png" alt=""></p>
+<h3 id="resources-links">Resources, Links</h3>
+<p>I used a few pieces to work out how to do this:</p>
+<p><a href="https://blog.rstudio.com/2014/11/24/rvest-easy-web-scraping-with-r/">rvest article</a></p>
+<p><a href="https://channel9.msdn.com/Events/useR-international-R-User-conferences/useR-International-R-User-2017-Conference/Scraping-data-with-rvest-and-purrr">rvest and purrr talk</a></p>
+<p><a href="https://cran.r-project.org/web/packages/RSelenium/vignettes/RSelenium-basics.html">the RSelenium vignettes</a></p>
+<p>If you think that there are ways I should do this differently please let me know on twitter (@callumgwt) or on the <a href="https://github.com/callumgwtaylor/snakes">github page for this package</a>.</p>
+<h4 id="same-disclaimer-as-last-time">Same Disclaimer As Last Time</h4>
+<p>Lastly, this is clearly not my data and I make no claims of ownership whatsover. The WHO are the copyright holders for any data, and whilst I think this package comes under acceptable use for research, please let me know if you’re someone from the WHO who disagrees.</p>
+<p>Actually lastly, this data is extracted from the WHO database, but I am not making any claims about their accuracy, so this information should not be used to make any clinical decision on use of antivenom, or any similar decisions.</p>
+
+  
+  </div>
+</article>
+
+
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2020  CallumGWTaylor 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+  
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+</html>

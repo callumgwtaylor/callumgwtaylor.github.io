@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CallumGWTaylor</title>
+    <link>http://example.org/</link>
+    <description>Recent content on CallumGWTaylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trying to Understand The Telegraph</title>
+      <link>http://example.org/post/trying-to-understand-the-telegraph/</link>
+      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/trying-to-understand-the-telegraph/</guid>
+      <description>Understanding the Telegraph There&amp;rsquo;s an article in the Telegraph titled: &amp;ldquo;Hospital intensive care no busier than normal, leaked documents show - even without Nightingales&amp;rdquo;
+This has been shared on Twitter by some prominent users who were interviewed for the piece
+The headline seems to suggest intensive care is in no different a place to where it would be any other winter. The article gives an impression of a &amp;ldquo;we&amp;rsquo;re making too big a fuss over this, so lockdown isn&amp;rsquo;t necessary&amp;rdquo; perspective.</description>
+    </item>
+    
+    <item>
+      <title>Using RSelenium and Docker To Webscrape In R - Using The WHO Snake Database</title>
+      <link>http://example.org/post/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/using-rselenium-and-docker-to-webscrape-in-r-using-the-who-snake-database/</guid>
+      <description>Webscraping In R with RSelenium - Extracting Information from the WHO Snake Antivenom Database Making Excuses Looking back at this post it seems a bit like how to draw an owl.
+But! The complicated parts towards the end and are very much the specifics of to download the WHO database. What I wanted to share were the basics of RSelenium installation and use. Hopefully this helps you if you were thinking of doing something similar.</description>
+    </item>
+    
+    <item>
+      <title>New Package In Development: Snakes</title>
+      <link>http://example.org/post/new-package-in-development-snakes/</link>
+      <pubDate>Sat, 27 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/new-package-in-development-snakes/</guid>
+      <description>tl:dr snakes is a package containing data on individual snake species, from the World Health Organization Snake Database. You can get an early version from “devtools::install_github(”callumgwtaylor/snakes“)”
+Recently for an assignment for my masters I was looking at the global burden of snakebite. Keen to get some pretty diagrams in to distract the reviewers from my terrible writing, I went online to find a resource we could analyse in R. This had worked well enough for previous essays, especially with the existence of The Humanitarian Data Exchange, plus a mini package I’d written for my own purposes to import their data easily.</description>
+    </item>
+    
+    <item>
+      <title>The State of Cholera in Yemen in December</title>
+      <link>http://example.org/post/yemen-cholera-update-december/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/yemen-cholera-update-december/</guid>
+      <description>Cholera in Yemen : UPDATED 16-DECEMBER-2017At the time of writing, the WHO has released information about 959810 cases of cholera in Yemen, with 2219 deaths. This post uses data released on 2017-11-26. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
+    </item>
+    
+    <item>
+      <title>The State of Cholera in Yemen in November</title>
+      <link>http://example.org/post/yemen-cholera-update-november/</link>
+      <pubDate>Thu, 16 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/yemen-cholera-update-november/</guid>
+      <description>Cholera in Yemen : UPDATED 16-NOVEMBER-2017At the time of writing, the WHO has released information about 913741 cases of cholera in Yemen, with 2196 deaths. This post uses data released on 2017-11-08. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
+    </item>
+    
+    <item>
+      <title>In Yemen, cases of cholera and deaths continue to rise</title>
+      <link>http://example.org/post/yemen-cholera-update-july/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/yemen-cholera-update-july/</guid>
+      <description>Cholera in Yemen : UPDATED 22-JULY-2017At the time of writing, the WHO has released information about 368207 cases of cholera in Yemen, with 1828 deaths. This post uses data released on 2017-07-19. This information has been collated by the Humanitarian Data Exchange (HDX), and put online. All the information below has been taken from HDX and read into R using hdxr. The code to run it all is in this rmarkdown document</description>
+    </item>
+    
+    <item>
+      <title>Cholera in Yemen is getting worse</title>
+      <link>http://example.org/post/cholera-in-yemen-is-getting-worse/</link>
+      <pubDate>Sun, 09 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/cholera-in-yemen-is-getting-worse/</guid>
+      <description>Publicly available data about the cholera crisis in Yemen is provided through bulletins from the World Health Organistion. Released online, each one gives the most recent running total of cholera cases and deaths in each part of the country. You can get a copy yourself here
+The code to recreate this map and the plot is available here
+The map below shows the most recent numbers.</description>
+    </item>
+    
+    <item>
+      <title>Cholera in Yemen - mapping deaths from the current epidemic using HDX in R</title>
+      <link>http://example.org/post/cholera-in-yemen/</link>
+      <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/cholera-in-yemen/</guid>
+      <description>Cholera in Yemen : UPDATED 12-JULY-2017At the time of writing this, the WHO has released information about 320199 cases of Cholera in Yemen, with 1742 deaths.
+This information has been collated by the Humanitarian Data Exchange (HDX), and put online. I made a new function for hdxr the other day to make it easier to use maps from HDX, and wanted to learn more about what’s happening in Yemen.</description>
+    </item>
+    
+    <item>
+      <title>Downloading data from HDX easily in a tidy format - hdxr and hdx_resource_csv</title>
+      <link>http://example.org/post/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</link>
+      <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/downloading-datasets-from-hdx-in-an-easier-pipeline-and-a-tidy-format-hdxr/</guid>
+      <description>An easier pipeline for Humanitarian Data Exchange, with a tidy formatI’ve been trying to make it easier to extract data from HDX in R, using tidyverse and ropensci packages. I’ve started compiling a mini-package called hdxr that wraps these pipelines up neatly.
+I’ve added a new function today hdx_resource_csv that means to download datasets from HDX all you need to do is the following:
+library(hdxr)hdx_connect()datasets &amp;lt;- hdx_package_search(term = &amp;quot;data title&amp;quot;) %&amp;gt;%hdx_resource_list() %&amp;gt;%hdx_resource_csv()I’ve described most of these functions in previous posts, but basically:</description>
+    </item>
+    
+    <item>
+      <title>Using sf, gganimate, and the Humanitarian Data Exchange to map ACLED data for Africa</title>
+      <link>http://example.org/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/using-sf-gganimate-and-the-humanitarian-data-exchange-to-map-acled-data-for-africa/</guid>
+      <description>Mapping fatalities from violence in Africa in 2017In my previous post I showed how I was trying to get data directly from the Humanitarian Data Exchange (HDX), in an R pipeline.
+Here’s a quick example of what it allows you to do. The visualisations in this aren’t pretty, it’s mainly meant as an example of what you can easily do. I’m really enjoying using sf to plot maps in ggplot2, thanks to Matt Strimas-Mackey showing how to get that working.</description>
+    </item>
+    
+    <item>
+      <title>Getting data from Humanitarian Data Exchange in a reproducible R pipeline</title>
+      <link>http://example.org/post/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/getting-data-from-humanitarian-data-exchange-in-a-reproducible-r-pipeline/</guid>
+      <description>Update: I’ve updated a couple of these functions, as they were messy and unreliable (they probably still are!). I’ve also put them together as a mini-package that you can install from github: hdxr. The code below is the OLD version, the up to date versions are on github. If you’ve ideas on how I should do it better, please let me know on github/twitter.
+I’ve been trying to make it easier for me to get information from the Humanitarian Data Exchange.</description>
+    </item>
+    
+    <item>
+      <title>Mini Package: hdxr</title>
+      <link>http://example.org/post/mini-package-hdxr/</link>
+      <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/mini-package-hdxr/</guid>
+      <description>Mini package - Mini postI realised that when I wrote this post, I should do something more sensible to share the code then put the text up in a blog. Writing a package seemed overkill though, and something you only do for ‘real code’.
+But curiousity got the better of me, and after reading the go-to post for package writing, I thought I might as well try.
+So here we are: hdxr</description>
+    </item>
+    
+    <item>
+      <title>Plotting deprivation in Scotland, using geofacet and sf in R</title>
+      <link>http://example.org/post/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/post/plotting-deprivation-in-scotland-using-geofacet-and-sf-in-r/</guid>
+      <description>Using the geofacet package to plot deprivation in Scotland by Health BoardsA few months ago, when I was first starting to learn to use R, I tried looking at the data from the Scottish Index of Multiple Deprivation. The Scottish Government split Scotland up into 6976 equally populated “data zones” (not quite neighbourhoods, but pretty close), and ranked them from most deprived (1), to least deprived (6976)
+Recently I’ve gone back to the same files, to see if what I’ve learnt has made it easier to look at deprivation in Scotland.</description>
+    </item>
+    
+  </channel>
+</rss>

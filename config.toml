@@ -2,6 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "CallumGWTaylor"
 theme = "cactus"
+publishDir = "docs"
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark.renderer]
