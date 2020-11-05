@@ -335,14 +335,14 @@ body .h2 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: rgba(86,124,119,0.8);
+  color: rgba(247, 99, 4,0.8);
   text-transform: none;
   letter-spacing: normal;
   font-weight: bold;
   font-size: 1rem;
 }
 body h3 {
-  color: rgba(86,124,119,0.8);
+  color: rgba(247, 99, 4,0.8);
   text-decoration: underline;
   font-weight: bold;
   font-size: 0.9rem;
@@ -426,7 +426,7 @@ body table {
 body th {
   padding: 8px;
   border-bottom: 1px dashed #666;
-  color: rgba(86,124,119,0.8);
+  color: rgba(247, 99, 4,0.8);
   font-weight: bold;
   font-size: 13px;
 }
@@ -1323,7 +1323,7 @@ article .content .caption {
   background-image: none;
 }
 .pagination a:hover:not(.active) {
-  color: rgba(86,124,119,0.8);
+  color: rgba(247, 99, 4,0.8);
 }
 .search-input {
   padding: 4px 7px;

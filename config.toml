@@ -1,13 +1,42 @@
 baseURL = "https://callumgwtaylor.github.io/"
 languageCode = "en-us"
 title = "CallumGWTaylor"
-theme = "cactus"
+theme = "callum"
 publishDir = "docs"
+
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark.renderer]
     unsafe = true
 [params]
-  showAllPostsOnHomePage = true
+  showAllPostsOnHomePage = false
+  rss = true
+googleAnalytics = "UA-100075448-1"
 
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
 
+[[menu.main]]
+name = "All posts"
+url = "/post"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "RSS"
+url = "/index.xml"
+weight = 4
+
+[[params.social]]
+  name = "github"
+  link = "https://github.com/callumgwtaylor"
+
+[[params.social]]
+  name = "twitter"
+  link = "https://twitter.com/callumgwt"
