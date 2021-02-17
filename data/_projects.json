@@ -1,0 +1,14 @@
+{
+  "list": [
+    {
+      "name":"Github Repos",
+      "url":"https://github.com/callumgwtaylor/",
+      "desc":"I'll try to put most projects up and public on here"
+    },
+    {
+      "name":"Opiate Converter",
+      "url":"https://callumgwtaylor.shinyapps.io/drugbalance/",
+      "desc":"Visualising comparative opiate and benzo doses in hospice |  <i> Learning to use Shiny </i> "
+    }
+  ]
+}
