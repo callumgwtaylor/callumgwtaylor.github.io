@@ -9,9 +9,12 @@ publishDir = "docs"
   [markup.goldmark.renderer]
     unsafe = true
 [params]
-  showAllPostsOnHomePage = false
+  showAllPostsOnHomePage = true
   rss = true
-googleAnalytics = "UA-100075448-1"
+  mathjax = true
+  showProjectsList = false
+  googleAnalytics = "UA-100075448-1"
+  description = "🩺 : Intensive Care Trainee in West of Scotland 🎓: Currently Studying for MA Medical Ethics and Law @ Keele Uni"
 
 [[menu.main]]
 name = "Home"
