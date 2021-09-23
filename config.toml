@@ -12,7 +12,7 @@ publishDir = "docs"
   showAllPostsOnHomePage = true
   rss = true
   mathjax = true
-  showProjectsList = false
+  showProjectsList = true
   googleAnalytics = "UA-100075448-1"
   description = "🩺 : Intensive Care Trainee in West of Scotland 🎓: Currently Studying for MA Medical Ethics and Law @ Keele Uni"
 

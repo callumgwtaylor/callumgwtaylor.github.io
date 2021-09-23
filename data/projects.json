@@ -1,0 +1,24 @@
+{
+  "list": [
+    {
+      "name":"FFICM Notes",
+      "url":"https://callumgwtaylor.github.io/fficm_notes/",
+      "desc":"At attempt to learn in public, my notes and flashcards for the FFICM exams"
+    },
+    {
+      "name":"EADTMH Notes",
+      "url":"https://callumgwtaylor.github.io/eadtmh-2018/",
+      "desc":"Similar to above link, these are the notes from the EADTMH"
+    },
+    {
+      "name":"Survival Calculator",
+      "url":"https://callumgwtaylor.shinyapps.io/survival/",
+      "desc":"An interactive graph made for a talk given on critical care ethics "
+    },
+    {
+      "name":"Opiate Converter",
+      "url":"https://callumgwtaylor.shinyapps.io/drugbalance/",
+      "desc":"Visualising comparative opiate and benzo doses in hospice |  <i> Learning to use Shiny </i> "
+    }
+  ]
+}
