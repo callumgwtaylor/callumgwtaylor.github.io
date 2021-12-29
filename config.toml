@@ -3,12 +3,14 @@ languageCode = "en-us"
 title = "CallumGWTaylor"
 theme = "callum"
 publishDir = "docs"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark.renderer]
     unsafe = true
 [params]
+  colortheme = "light"
   showAllPostsOnHomePage = true
   rss = true
   mathjax = true
